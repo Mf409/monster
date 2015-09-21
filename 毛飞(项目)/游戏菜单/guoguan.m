@@ -24,7 +24,7 @@
         [CCMenuItemFont  setFontName:@"Marker Felt"];
         [CCMenuItemFont  setFontSize:20];
         CCMenuItem* a=[CCMenuItemFont   itemFromString:@"恭喜过关!" target:self selector:nil];
-        CCMenuItem* a0=[CCMenuItemFont   itemFromString:@"奖励一个一百级的引擎，请注意查收！" target:self selector:@selector(jiangli)];
+        CCMenuItem* a0=[CCMenuItemFont   itemFromString:@"获得奖励，请注意领取！" target:self selector:@selector(jiangli)];
         CCMenuItem* a1=[CCMenuItemFont   itemFromString:@"进入下一关卡！" target:self selector:@selector(jixu)];
         CCMenuItem* a2=[CCMenuItemFont   itemFromString:@"重新玩次关卡!" target:self selector:@selector(tuichu)];
      

@@ -14,6 +14,7 @@
 #import "guoguan.h"
 #import "SimpleAudioEngine.h"
 #import "setGame.h"
+#import "jiangli.h"
 @implementation guanka1
 @synthesize monstres,smokes,monstersDestroyed;
 -(void)addMonster{

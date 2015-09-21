@@ -10,35 +10,37 @@
 #import "cocos2d.h"
 #import "guoguan.h"
 #import "beibao.h"
+#import "guanka1.h"
+#import "HelloWorldLayer.h"
 @implementation jiangli
 -(id) init
 {
     if( (self=[super init])) {
-        CGSize sm=[[CCDirector  sharedDirector]winSize];
-        CGPoint o=ccp(200, 200);
-
-        CCSprite* bj=[CCSprite  spriteWithFile:@"30.jpg"];
-        bj.position=ccp(150, 300);
+        CCSprite* bj1=[CCSprite  spriteWithFile:@"l.jpg"];
+        bj1.position=ccp(160, 240);
+        
+        [self  addChild:bj1];
+        CGPoint o=ccp(120, 320);
+   CCSprite* bj=[CCSprite  spriteWithFile:@"30.jpg"];
+        bj.position=ccp(100, 300);
         id action=[bj  runAction:[CCPlace  actionWithPosition:o]];
-        id  action1=[CCMoveTo  actionWithDuration:3 position:ccp(sm.width-40, sm.height-40)];
-        id action2=[CCJumpTo  actionWithDuration:2 position:ccp(100, 30) height:30 jumps:4];
-        id action3=[CCBlink   actionWithDuration:4 blinks:6];
-        id  action4=[CCTintBy   actionWithDuration:0.5 red:0 green:255 blue:255];
-        id action5=[CCRotateTo  actionWithDuration:3 angle:60];
+
         id action6=[CCScaleBy  actionWithDuration:3 scaleX:2 scaleY:2];
-        [bj runAction:[CCSequence  actions:action,action1,action4,action3,action2,action6,action5,   nil]];
+        [bj runAction:[CCSequence  actions:action,action6,  nil]];
         [self  addChild:bj];
         [CCMenuItemFont  setFontName:@"Marker Felt"];
         [CCMenuItemFont  setFontSize:20];
-       
+        CCMenuItemFont* a1=[CCMenuItemFont   itemFromString:@"进入背包" target:self selector:@selector(beibao)];
+        [a1  setIsEnabled:YES];
+        CCMenuItemFont* a2=[CCMenuItemFont   itemFromString:@"进入游戏" target:self selector:@selector(guanka1)];
+        [a2  setIsEnabled:YES];
+        CCMenuItemFont* a3=[CCMenuItemFont   itemFromString:@"返回首页" target:self selector:@selector(shouye)];
+        [a3  setIsEnabled:YES];
         CCMenuItemFont* a=[CCMenuItemFont   itemFromString:@"点击领取" target:self selector:@selector(myButton:)];
                [a  setIsEnabled:YES];
-        CCMenuItemFont* a1=[CCMenuItemFont   itemFromString:@" 我的背包" target:self selector:@selector(beibao)];
-        [a1  setIsEnabled:YES];
-
-        CCMenu *menu=[CCMenu menuWithItems:a,a1, nil];
+        CCMenu *menu=[CCMenu menuWithItems:a,a1,a2,a3, nil];
         menu.position=ccp(250, 80);
-        [menu  alignItemsInColumns:[NSNumber  numberWithUnsignedInt:1],[NSNumber  numberWithUnsignedInt:1],nil];
+        [menu  alignItemsInColumns:[NSNumber  numberWithUnsignedInt:1],[NSNumber  numberWithUnsignedInt:1],[NSNumber  numberWithUnsignedInt:1],[NSNumber  numberWithUnsignedInt:1],nil];
         [menu   alignItemsVertically];
         [self  addChild:menu];
         
@@ -53,7 +55,19 @@
 }
 -(void)beibao{
     CCScene*fei=[CCScene  node];
-    beibao*   layer88=[beibao node];
+    beibao*   layer88=[beibao  node];
+    [fei addChild:layer88];
+    [[CCDirector  sharedDirector]replaceScene:fei];
+}
+-(void)guanka1{
+    CCScene*fei=[CCScene  node];
+    guanka1*   layer88=[guanka1  node];
+    [fei addChild:layer88];
+    [[CCDirector  sharedDirector]replaceScene:fei];
+}
+-(void)shouye{
+    CCScene*fei=[CCScene  node];
+    HelloWorldLayer*   layer88=[HelloWorldLayer  node];
     [fei addChild:layer88];
     [[CCDirector  sharedDirector]replaceScene:fei];
 }

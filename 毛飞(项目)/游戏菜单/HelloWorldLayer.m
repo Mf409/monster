@@ -14,6 +14,7 @@
 #import "NewGame.h"
 #import "Quit.h"
 #import "beibao.h"
+#import "jiangli.h"
 #import "Guanka.h"
 #import "SimpleAudioEngine.h"
 
