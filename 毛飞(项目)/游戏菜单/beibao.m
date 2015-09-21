@@ -25,6 +25,10 @@
         CCSprite* bj1=[CCSprite  spriteWithFile:@"202.jpg"];
         bj1.position=ccp(245, 380);
         [self  addChild:bj1];
+//        UIButton *button=[[UIButton  alloc]initWithFrame:CGRectMake(80, 280, 20, 40)];
+//        [button setTitle:@"远程战机" forState:UIControlStateNormal];
+//        [button setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+//        [self  addChild:button];
         CCMenuItemFont* button=[CCMenuItemFont   itemFromString:@"远程战机" target:self selector:nil];
         button.position=ccp(80, 280);
         [button  setIsEnabled:YES];

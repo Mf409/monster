@@ -55,8 +55,8 @@
 }
 -(void)beibao{
     CCScene*fei=[CCScene  node];
-    beibao*   layer88=[beibao  node];
-    [fei addChild:layer88];
+    beibao*   layer880=[beibao  node];
+    [fei addChild:layer880];
     [[CCDirector  sharedDirector]replaceScene:fei];
 }
 -(void)guanka1{
