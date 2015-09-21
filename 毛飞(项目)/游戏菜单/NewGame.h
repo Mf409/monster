@@ -8,7 +8,12 @@
 
 #import "CCLayer.h"
 #import "cocos2d.h"
+#import "Guanka.h"
 #import "HelloWorldLayer.h"
+#import "setGame.h"
 @interface NewGame : CCLayer
+@property  NSMutableArray *monstres;
+@property NSMutableArray  *smokes;
+@property  int monstersDestroyed;
 
 @end
