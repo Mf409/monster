@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8152.3" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8124.4"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -20,9 +20,6 @@
                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="203.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="DGj-bF-td0">
                     <rect key="frame" x="13" y="289" width="148" height="220"/>
                 </imageView>
-                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="204.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="saP-mp-8Q0">
-                    <rect key="frame" x="178" y="289" width="137" height="220"/>
-                </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="远程战机" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kTm-Kw-YWJ">
                     <rect key="frame" x="53" y="249" width="68" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -30,7 +27,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="护盾" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mAm-j6-rPe">
-                    <rect key="frame" x="225" y="249" width="34" height="21"/>
+                    <rect key="frame" x="229" y="249" width="34" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
@@ -47,6 +44,9 @@
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="204.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="saP-mp-8Q0">
+                    <rect key="frame" x="178" y="289" width="137" height="220"/>
+                </imageView>
             </subviews>
             <color key="backgroundColor" red="0.92338763759999998" green="0.83813580659999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
             <color key="tintColor" red="0.33958811150000001" green="0.21770012" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -58,6 +58,6 @@
         <image name="201.jpg" width="150" height="220"/>
         <image name="202.jpg" width="149" height="220"/>
         <image name="203.jpg" width="148" height="220"/>
-        <image name="204.jpg" width="175" height="220"/>
+        <image name="204.jpg" width="153" height="213"/>
     </resources>
 </document>

@@ -33,9 +33,12 @@
        
         CCMenuItemFont* a=[CCMenuItemFont   itemFromString:@"点击领取" target:self selector:@selector(myButton:)];
                [a  setIsEnabled:YES];
-        CCMenu *menu=[CCMenu menuWithItems:a, nil];
+        CCMenuItemFont* a1=[CCMenuItemFont   itemFromString:@" 我的背包" target:self selector:@selector(beibao)];
+        [a1  setIsEnabled:YES];
+
+        CCMenu *menu=[CCMenu menuWithItems:a,a1, nil];
         menu.position=ccp(250, 80);
-        [menu  alignItemsInColumns:[NSNumber  numberWithUnsignedInt:1],nil];
+        [menu  alignItemsInColumns:[NSNumber  numberWithUnsignedInt:1],[NSNumber  numberWithUnsignedInt:1],nil];
         [menu   alignItemsVertically];
         [self  addChild:menu];
         
@@ -48,4 +51,11 @@
     UIAlertView*nn=[[UIAlertView  alloc]initWithTitle:@"提示" message:@"确定领取" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:@"取消", nil];
     [nn show];
 }
+-(void)beibao{
+    CCScene*fei=[CCScene  node];
+    beibao*   layer88=[beibao node];
+    [fei addChild:layer88];
+    [[CCDirector  sharedDirector]replaceScene:fei];
+}
+
 @end
