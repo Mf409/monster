@@ -13,7 +13,7 @@
 
 #import "NewGame.h"
 #import "Quit.h"
-
+#import "jiangli.h"
 #import "Guanka.h"
 #import "SimpleAudioEngine.h"
 

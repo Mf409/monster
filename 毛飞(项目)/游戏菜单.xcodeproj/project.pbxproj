@@ -176,6 +176,7 @@
 		84FDDB4C1B2142F60088F9EB /* 0abc.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 84FDDB441B2142F60088F9EB /* 0abc.mp3 */; };
 		84FDDB4D1B2142F60088F9EB /* 6abc.png in Resources */ = {isa = PBXBuildFile; fileRef = 84FDDB451B2142F60088F9EB /* 6abc.png */; };
 		84FDDD091B2154E10088F9EB /* beijing.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 84FDDD071B2154E10088F9EB /* beijing.mp3 */; };
+		85876AA71BAFAF260028B0AF /* l.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 85876AA61BAFAF260028B0AF /* l.jpg */; };
 		E661E2451BA68E96002F82AA /* jiangli.m in Sources */ = {isa = PBXBuildFile; fileRef = E661E2441BA68E96002F82AA /* jiangli.m */; };
 		E661E2471BA68FB4002F82AA /* jiangli.xib in Resources */ = {isa = PBXBuildFile; fileRef = E661E2461BA68FB4002F82AA /* jiangli.xib */; };
 		E661E2491BA690ED002F82AA /* 30.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E661E2481BA690ED002F82AA /* 30.jpg */; };
@@ -479,6 +480,7 @@
 		84FDDB441B2142F60088F9EB /* 0abc.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 0abc.mp3; sourceTree = SOURCE_ROOT; };
 		84FDDB451B2142F60088F9EB /* 6abc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 6abc.png; sourceTree = SOURCE_ROOT; };
 		84FDDD071B2154E10088F9EB /* beijing.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = beijing.mp3; sourceTree = SOURCE_ROOT; };
+		85876AA61BAFAF260028B0AF /* l.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = l.jpg; sourceTree = "<group>"; };
 		E661E2431BA68E96002F82AA /* jiangli.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jiangli.h; sourceTree = "<group>"; };
 		E661E2441BA68E96002F82AA /* jiangli.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = jiangli.m; sourceTree = "<group>"; };
 		E661E2461BA68FB4002F82AA /* jiangli.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = jiangli.xib; sourceTree = "<group>"; };
@@ -907,6 +909,7 @@
 		84C2D9E01B33C95800517B80 /* 图片副本 */ = {
 			isa = PBXGroup;
 			children = (
+				85876AA61BAFAF260028B0AF /* l.jpg */,
 				E6E0B5C51BAA48440018764F /* 201.jpg */,
 				E6E0B5C61BAA48440018764F /* 202.jpg */,
 				E6E0B5C71BAA48440018764F /* 203.jpg */,
@@ -1038,6 +1041,7 @@
 				84C2D9FA1B33C95800517B80 /* 7副本.jpg in Resources */,
 				84C2D9FC1B33C95800517B80 /* o1.jpg in Resources */,
 				84EB2C131B38FA9B006BDAAF /* yinyue.mp3 in Resources */,
+				85876AA71BAFAF260028B0AF /* l.jpg in Resources */,
 				84EB2C141B38FA9B006BDAAF /* zidan.mp3 in Resources */,
 				84EB2C161B38FCD1006BDAAF /* uo.png in Resources */,
 				84EB2C1A1B390105006BDAAF /* cv.jpg in Resources */,
