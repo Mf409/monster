@@ -12,6 +12,7 @@
 #import "guanka1.h"
 #import "guanka2.h"
 #import "jiangli.h"
+#import "fenshu.h"
 @implementation guoguan
 -(id) init
 {
@@ -24,11 +25,12 @@
         [CCMenuItemFont  setFontName:@"Marker Felt"];
         [CCMenuItemFont  setFontSize:20];
         CCMenuItem* a=[CCMenuItemFont   itemFromString:@"恭喜过关!" target:self selector:nil];
+        CCMenuItem* a9=[CCMenuItemFont   itemFromString:@"查看分数!" target:self selector:@selector(fenshu)];
         CCMenuItem* a0=[CCMenuItemFont   itemFromString:@"获得奖励，请注意领取！" target:self selector:@selector(jiangli)];
         CCMenuItem* a1=[CCMenuItemFont   itemFromString:@"进入下一关卡！" target:self selector:@selector(jixu)];
         CCMenuItem* a2=[CCMenuItemFont   itemFromString:@"重新玩次关卡!" target:self selector:@selector(tuichu)];
      
-        CCMenu*  menu=[CCMenu   menuWithItems:a,a0,a1,a2, nil];
+        CCMenu*  menu=[CCMenu   menuWithItems:a,a9, a0,a1,a2, nil];
         [menu   alignItemsVertically];
         [self  addChild:menu];
         CCParticleSystemQuad*mao=[CCParticleSystemQuad  particleWithFile:@"Upsidedown.plist"];
@@ -55,5 +57,11 @@
     jiangli *layer201=[jiangli  node];
     [sc102 addChild:layer201];
     [[CCDirector sharedDirector]replaceScene:sc102];
+}
+-(void)fenshu{
+    CCScene *sc1020=[CCScene  node];
+    fenshu *layer2010=[fenshu node];
+    [sc1020 addChild:layer2010];
+    [[CCDirector sharedDirector]replaceScene:sc1020];
 }
 @end

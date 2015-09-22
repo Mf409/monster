@@ -16,7 +16,7 @@
     if(self==[super  init]){
         [CCMenuItemFont  setFontName:@"Marker Felt"];
         [CCMenuItemFont  setFontSize:25];
-        CCSprite*v=[CCSprite  spriteWithFile:@"nb.jpg"];
+        CCSprite*v=[CCSprite  spriteWithFile:@"lpl.jpg"];
         v.position=ccp(160, 240);
         [self  addChild:v];
         CCMenuItemFont *m1=[CCMenuItemFont  itemFromString:@"飞机类型"];
@@ -43,6 +43,10 @@
         
         [menu  alignItemsInColumns:[NSNumber  numberWithUnsignedInt:2],[NSNumber  numberWithUnsignedInt:2],[NSNumber  numberWithUnsignedInt:2],[NSNumber  numberWithUnsignedInt:2],[NSNumber  numberWithUnsignedInt:2],[NSNumber  numberWithUnsignedInt:1], [NSNumber  numberWithUnsignedInt:1], nil];
         [self  addChild:menu];
+        CCParticleSystemQuad*mao=[CCParticleSystemQuad  particleWithFile:@"OneParticle.plist"];
+        [self  addChild:mao];
+
+        
        }
     return self;
 }

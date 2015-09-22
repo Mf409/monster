@@ -30,6 +30,7 @@
         [self  addChild:menu];
         CCParticleSystemQuad*mao=[CCParticleSystemQuad  particleWithFile:@"LavaFlow.plist"];
         [self  addChild:mao];
+        
     }
     return self;
 }

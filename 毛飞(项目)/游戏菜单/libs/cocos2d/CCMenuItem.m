@@ -397,6 +397,8 @@ const uint32_t	kZoomActionTag = 0xc0c05002;
 	fontSize_ = _fontSize;
 
 	CCLabelTTF *label = [CCLabelTTF labelWithString:value fontName:fontName_ fontSize:fontSize_];
+    ccColor3B ccMenu = {0,255,255};
+    label.color = ccMenu;
 
 	if((self=[super initWithLabel:label target:rec selector:cb]) ) {
 		// do something ?

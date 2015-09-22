@@ -43,6 +43,9 @@
         [menu  alignItemsInColumns:[NSNumber  numberWithUnsignedInt:1],[NSNumber  numberWithUnsignedInt:1],[NSNumber  numberWithUnsignedInt:1],[NSNumber  numberWithUnsignedInt:1],nil];
         [menu   alignItemsVertically];
         [self  addChild:menu];
+        CCParticleSystemQuad*mao=[CCParticleSystemQuad  particleWithFile:@"Galaxy.plist"];
+        [self  addChild:mao];
+
         
     }
     return self;

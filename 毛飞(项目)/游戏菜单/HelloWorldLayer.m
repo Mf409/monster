@@ -43,7 +43,7 @@
 	// Apple recommends to re-assign "self" with the "super" return value
 	if( (self=[super init])) {
         //添加背景
-        CCSprite* bj=[CCSprite  spriteWithFile:@"o1.jpg"];
+        CCSprite* bj=[CCSprite  spriteWithFile:@"kil.jpg"];
         bj.position=ccp(160,240);
         //背景音乐
         [[SimpleAudioEngine  sharedEngine]playBackgroundMusic:@ "yinyue.mp3"];
@@ -53,19 +53,25 @@
         [CCMenuItemFont  setFontName:@"Marker Felt"];
         [CCMenuItemFont  setFontSize:40];
         //[CCMenuItemFont   setVersion:40];
+         CCMenuItem* a3=[CCMenuItemFont   itemFromString:@"打怪兽" target:self selector:nil];
+        [a3  setIsEnabled:NO];
+        a3.position=ccp(100, 80);
+        
         CCMenuItem* a=[CCMenuItemFont   itemFromString:@"新游戏" target:self selector:@selector(xinyou)];//newgame
+        
         CCMenuItem* b=[CCMenuItemFont   itemFromString:@"游戏设置" target:self selector:@selector(setinggame)];//setgame
        
        
         CCMenuItem* c=[CCMenuItemFont   itemFromString:@"退出游戏" target:self selector:@selector(Quit)];
         CCMenuItem* n=[CCMenuItemFont   itemFromString:@"游戏关卡" target:self selector:@selector(Guan)];
         
-        CCMenu*  menu=[CCMenu   menuWithItems:a,b,n,c, nil];
+        CCMenu*  menu=[CCMenu   menuWithItems:a3, a,b,n,c, nil];
         [menu   alignItemsVertically];
         [self  addChild:menu];
-		// position the label on the center of the screen
-				
-		// add the label as a child to this Layer
+        CCParticleSystemQuad*mao=[CCParticleSystemQuad  particleWithFile:@"debian.plist"];
+        [self  addChild:mao];
+
+		
 		
 	}
 	return self;

@@ -33,6 +33,7 @@
         
         [menu   alignItemsVertically];
         [self  addChild:menu];
+       
     }
     return self;
 }

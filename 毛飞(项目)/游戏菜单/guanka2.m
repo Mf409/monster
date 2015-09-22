@@ -44,7 +44,7 @@
 -(id) init
 {
 	if( (self=[super init])) {
-        CCSprite* bj=[CCSprite  spriteWithFile:@"7副本.jpg"];
+        CCSprite* bj=[CCSprite  spriteWithFile:@"dff.jpg"];
         bj.position=ccp(160, 240);
         
         [self  addChild:bj];

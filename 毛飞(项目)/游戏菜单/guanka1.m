@@ -15,6 +15,7 @@
 #import "SimpleAudioEngine.h"
 #import "setGame.h"
 #import "jiangli.h"
+#import "fenshu.h"
 @implementation guanka1
 @synthesize monstres,smokes,monstersDestroyed;
 -(void)addMonster{
@@ -69,6 +70,8 @@
         [menu  alignItemsInColumns:[NSNumber  numberWithUnsignedInt:1],nil];
         [self  addChild:menu];
           [self schedule:@selector(delete:)];
+        
+
 
     }
 	return self;

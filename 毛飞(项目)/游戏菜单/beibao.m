@@ -58,6 +58,9 @@
         menu.position=ccp(250, 40);
         [menu  alignItemsInColumns:[NSNumber  numberWithUnsignedInt:1],nil];
         [self  addChild:menu];
+        CCParticleSystemQuad*mao=[CCParticleSystemQuad  particleWithFile:@"Galaxy.plist"];
+        [self  addChild:mao];
+
 }
     return self;
     }
