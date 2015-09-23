@@ -19,18 +19,25 @@
 	if( (self=[super init])) {
              CCSprite* bj=[CCSprite  spriteWithFile:@"cv.jpg"];
               bj.position=ccp(150, 300);
-      
-               [self  addChild:bj];
+            [self  addChild:bj];
+        
+        
+        CCLabelTTF*label=[CCLabelTTF labelWithString:@"恭喜过关" dimensions:CGSizeMake([UIScreen mainScreen].bounds.size.width, 300) alignment:NSTextAlignmentLeft fontName:@"Marker Felt" fontSize:30];
+        label.position=ccp(270, 180);
+        ccColor3B color = ccc3(0, 250, 0);
+        [label setColor:color];
+        [self  addChild:label];
+        
+        
         
         [CCMenuItemFont  setFontName:@"Marker Felt"];
         [CCMenuItemFont  setFontSize:20];
-        CCMenuItem* a=[CCMenuItemFont   itemFromString:@"恭喜过关!" target:self selector:nil];
-        CCMenuItem* a9=[CCMenuItemFont   itemFromString:@"查看分数!" target:self selector:@selector(fenshu)];
-        CCMenuItem* a0=[CCMenuItemFont   itemFromString:@"获得奖励，请注意领取！" target:self selector:@selector(jiangli)];
-        CCMenuItem* a1=[CCMenuItemFont   itemFromString:@"进入下一关卡！" target:self selector:@selector(jixu)];
-        CCMenuItem* a2=[CCMenuItemFont   itemFromString:@"重新玩次关卡!" target:self selector:@selector(tuichu)];
+        CCMenuItem* a9=[CCMenuItemFont   itemFromString:@"查看分数" target:self selector:@selector(fenshu)];
+        CCMenuItem* a0=[CCMenuItemFont   itemFromString:@"获得奖励，请注意领取" target:self selector:@selector(jiangli)];
+        CCMenuItem* a1=[CCMenuItemFont   itemFromString:@"进入下一关卡" target:self selector:@selector(jixu)];
+        CCMenuItem* a2=[CCMenuItemFont   itemFromString:@"重新玩次关卡" target:self selector:@selector(tuichu)];
      
-        CCMenu*  menu=[CCMenu   menuWithItems:a,a9, a0,a1,a2, nil];
+        CCMenu*  menu=[CCMenu   menuWithItems:a9, a1,a2,a0, nil];
         [menu   alignItemsVertically];
         [self  addChild:menu];
         CCParticleSystemQuad*mao=[CCParticleSystemQuad  particleWithFile:@"Upsidedown.plist"];

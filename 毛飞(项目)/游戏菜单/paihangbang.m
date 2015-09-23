@@ -26,7 +26,7 @@
         [CCMenuItemFont  setFontSize:20];
         CCMenuItem* a=[CCMenuItemFont   itemFromString:@"第一名：小李  分数：9666" target:self selector:nil];
        CCMenuItem* a1=[CCMenuItemFont   itemFromString:@"第二名：小张  分数：9555" target:self selector:nil];
-        CCMenuItem* a2=[CCMenuItemFont   itemFromString:@"第三名：小赵  分数：9444" target:self selector:nil];
+        CCMenuItem* a2=[CCMenuItemFont  itemFromString:@"第三名：我    分数：9444" target:self selector:nil];
          CCMenuItem* a3=[CCMenuItemFont  itemFromString:@"第四名：小王  分数：9333" target:self selector:nil];
         CCMenuItem* a4=[CCMenuItemFont   itemFromString:@"第五名：张三  分数：9222" target:self selector:nil];
         CCMenuItem* a5=[CCMenuItemFont   itemFromString:@"第六名：李斯  分数：9111" target:self selector:nil];

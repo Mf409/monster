@@ -10,5 +10,5 @@
 #import "cocos2d.h"
 #import "jiangli.h"
 @interface beibao : CCLayer
-
++(CCScene *) scene;
 @end

@@ -24,6 +24,10 @@
         [m1  setIsEnabled:NO];
         CCMenuItemToggle* m=[CCMenuItemToggle  itemWithTarget:self selector:nil items:[CCMenuItemFont  itemFromString:@"大型机"],
                              [CCMenuItemFont  itemFromString:@"小型机"],[CCMenuItemFont  itemFromString:@"中型机"],nil];
+        CCMenuItemFont *m01=[CCMenuItemFont  itemFromString:@"人物"];
+        [m01  setIsEnabled:NO];
+        CCMenuItemToggle* m0=[CCMenuItemToggle  itemWithTarget:self selector:nil items:[CCMenuItemFont  itemFromString:@"倚若"],
+                              [CCMenuItemFont  itemFromString:@"卡塔"],[CCMenuItemFont  itemFromString:@"鸠垄"],nil];
         CCMenuItemFont *f1=[CCMenuItemFont  itemFromString:@"属性"];
         [f1  setIsEnabled:NO];
         CCMenuItemToggle* f=[CCMenuItemToggle  itemWithTarget:self selector:nil items:[CCMenuItemFont  itemFromString:@"攻击机"],
@@ -37,13 +41,19 @@
         CCMenuItemFont *sb=[CCMenuItemFont   itemFromString:@"射程"];
          [sb setIsEnabled:NO];
          CCMenuItemToggle *s=[CCMenuItemToggle  itemWithTarget:self selector:nil items:[CCMenuItemFont itemFromString:@"近程"], [CCMenuItemFont itemFromString:@"远程"],[CCMenuItemFont itemFromString:@"中程"],nil];
+        
+        CCMenuItemFont *sob=[CCMenuItemFont   itemFromString:@"游戏模式"];
+        [sob setIsEnabled:NO];
+        CCMenuItemToggle *so=[CCMenuItemToggle  itemWithTarget:self selector:nil items:[CCMenuItemFont itemFromString:@"闯关模式"], [CCMenuItemFont itemFromString:@"无尽模式"],[CCMenuItemFont itemFromString:@"晋级模式"],nil];
+        
+        
         CCMenuItemFont* b=[CCMenuItemFont   itemFromString:@"首页" target:self selector:@selector(back:)];
          CCMenuItemFont* b1=[CCMenuItemFont   itemFromString:@"背包" target:self selector:@selector(go:)];
         CCMenuItemFont* r=[CCMenuItemFont itemFromString:@"进入游戏" target:self  selector:@selector(go)];
         
-        CCMenu *menu=[CCMenu menuWithItems:m1,m,f1,f,sb,s,i1,i,e1,e,b,b1, r, nil];
+        CCMenu *menu=[CCMenu menuWithItems:m01,m0, sb,s,e1,e,i1,i,f1,f,m1,m,sob,so, b,b1, r, nil];
         
-        [menu  alignItemsInColumns:[NSNumber  numberWithUnsignedInt:2],[NSNumber  numberWithUnsignedInt:2],[NSNumber  numberWithUnsignedInt:2],[NSNumber  numberWithUnsignedInt:2],[NSNumber  numberWithUnsignedInt:2],[NSNumber  numberWithUnsignedInt:1], [NSNumber  numberWithUnsignedInt:1],[NSNumber  numberWithUnsignedInt:1], nil];
+        [menu  alignItemsInColumns:[NSNumber  numberWithUnsignedInt:2],[NSNumber  numberWithUnsignedInt:2],[NSNumber  numberWithUnsignedInt:2],[NSNumber  numberWithUnsignedInt:2],[NSNumber  numberWithUnsignedInt:2],[NSNumber  numberWithUnsignedInt:2],[NSNumber  numberWithUnsignedInt:2],[NSNumber  numberWithUnsignedInt:1], [NSNumber  numberWithUnsignedInt:1],[NSNumber  numberWithUnsignedInt:1], nil];
         [self  addChild:menu];
         CCParticleSystemQuad*mao=[CCParticleSystemQuad  particleWithFile:@"OneParticle.plist"];
         [self  addChild:mao];

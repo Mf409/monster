@@ -26,9 +26,9 @@
         [sb setIsEnabled:YES];
         CCMenuItemToggle *s=[CCMenuItemToggle  itemWithTarget:self selector:nil items:[CCMenuItemFont itemFromString:@"本局得分：1234"], [CCMenuItemFont itemFromString:@"最高分：9999"],[CCMenuItemFont itemFromString:@"上局得分：2036"],nil];
         CCMenuItem* a0=[CCMenuItemFont   itemFromString:@"排行榜" target:self selector:@selector(pai)];
-        CCMenuItem* a=[CCMenuItemFont   itemFromString:@"重玩次关!" target:self selector:@selector(chong)];
-        CCMenuItem* a1=[CCMenuItemFont   itemFromString:@"进入下一关!" target:self selector:@selector(next)];
-        CCMenuItem* a2=[CCMenuItemFont   itemFromString:@"返回首页!" target:self selector:@selector(back)];
+        CCMenuItem* a=[CCMenuItemFont   itemFromString:@"重玩次关" target:self selector:@selector(chong)];
+        CCMenuItem* a1=[CCMenuItemFont   itemFromString:@"进入下一关" target:self selector:@selector(next)];
+        CCMenuItem* a2=[CCMenuItemFont   itemFromString:@"返回首页" target:self selector:@selector(back)];
         CCMenu *menu=[CCMenu menuWithItems:sb,s,a0,  a,a1,a2, nil];
         [menu  alignItemsInColumns:[NSNumber  numberWithUnsignedInt:2],[NSNumber  numberWithUnsignedInt:1],[NSNumber  numberWithUnsignedInt:1],[NSNumber  numberWithUnsignedInt:1],[NSNumber  numberWithUnsignedInt:1],nil];
           [self  addChild:menu];

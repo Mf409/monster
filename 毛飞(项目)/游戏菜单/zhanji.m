@@ -11,6 +11,7 @@
 #import "HelloWorldLayer.h"
 #import "guanka1.h"
 #import "guanka2.h"
+#import "yiban.h"
 @implementation zhanji
 -(id)init{
     if(self==[super  init]){
@@ -34,17 +35,20 @@
         CCMenuItemImage *image1=[CCMenuItemImage  itemFromNormalImage:@"10副本.png" selectedImage:@"10副本.png" target:self selector:@selector(back)];
         image1.position=ccp(250, 100);
         //[self  addChild:image1];
-        CCMenu*  menu=[CCMenu   menuWithItems:image,image1, nil];
+        CCMenuItemImage *image2=[CCMenuItemImage  itemFromNormalImage:@"01020.png" selectedImage:@"01020.png" target:self selector:@selector(back1)];
+        image2.position=ccp(350, 100);
+        
+        CCMenu*  menu=[CCMenu   menuWithItems:image,image1,image2, nil];
         //以列的方式摆放
         //[menu   alignItemsVertically];
         [menu  alignItemsHorizontally];
-        menu.position=ccp(180, 100);
+        menu.position=ccp(150, 100);
         [self  addChild:menu];
     }
     return self;
 }
 -(void)back{
-    NSLog(@"back");
+    
     CCScene*r=[CCScene  node];
    guanka1*layer11=[guanka1  node];
     
@@ -52,12 +56,18 @@
     [[CCDirector  sharedDirector]replaceScene:r];
 }
 -(void)hui{
-    NSLog(@"hui");
+    
     CCScene*r=[CCScene  node];
     guanka2*layer11=[guanka2  node];
     
     [r addChild:layer11];
     [[CCDirector  sharedDirector]replaceScene:r];
 }
-
+-(void)back1{
+    CCScene*r=[CCScene  node];
+    yiban*layer11=[yiban  node];
+    
+    [r addChild:layer11];
+    [[CCDirector  sharedDirector]replaceScene:r];
+}
 @end

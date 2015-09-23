@@ -12,6 +12,22 @@
 #import "HelloWorldLayer.h"
 #import "yiban.h"
 @implementation beibao
++(CCScene *) scene
+{
+    // 'scene' is an autorelease object.
+    CCScene *scene = [CCScene node];
+    
+    // 'layer' is an autorelease object.
+   beibao *layer = [beibao node];
+    
+    // add layer as a child to scene
+    [scene addChild: layer];
+    
+    // return the scene
+    return scene;
+}
+
+
 -(id) init
 {
     

@@ -53,9 +53,26 @@
 }
 -(void)myButton:(UIButton *)sender{
     
-    UIAlertView*nn=[[UIAlertView  alloc]initWithTitle:@"提示" message:@"确定领取" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:@"取消", nil];
+    UIAlertView*nn=[[UIAlertView  alloc]initWithTitle:@"提示" message:@"确定领取" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
     [nn show];
 }
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    if (buttonIndex == 1) {
+        UIAlertView*nn=[[UIAlertView  alloc]initWithTitle:@"提示" message:@"领取成功" delegate:self cancelButtonTitle:@"进入背包" otherButtonTitles:@"留在此页", nil];
+        [nn show];
+        
+    }
+    if(buttonIndex == 0){
+        [[CCDirector  sharedDirector]replaceScene:[beibao scene]];
+
+    }
+    
+    
+}
+
+
+
+
 -(void)beibao{
     CCScene*fei=[CCScene  node];
     beibao*   layer880=[beibao  node];

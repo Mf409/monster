@@ -56,14 +56,15 @@
           [self setIsTouchEnabled:YES];
         CCSprite* bj=[CCSprite  spriteWithFile:@"5副本.jpg"];
         bj.position=ccp(160, 240);
-        
         [self  addChild:bj];
-
-		CGSize size = [[CCDirector sharedDirector] winSize];
+         //飞机位置
+        CGSize size = [[CCDirector sharedDirector] winSize];
         CCSprite* f=[CCSprite  spriteWithFile:@"10副本.png"];
         f.position=ccp(100, 100);
-        [self  addChild:f];
+        [self  addChild:f];                   
         [self  schedule:@selector(gameLogic:)interval:1.0];
+        
+        
         CCMenuItemFont* b=[CCMenuItemFont   itemFromString:@"退出游戏" target:self selector:@selector(back:)];
         [b  setIsEnabled:YES];
         CCMenu *menu=[CCMenu menuWithItems:b, nil];

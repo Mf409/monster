@@ -13,6 +13,7 @@
 #import "SimpleAudioEngine.h"
 #import "tongguan.h"
 #import "beibao.h"
+#import "zhanji.h"
 @implementation yiban
 @synthesize monstres,smokes,monstersDestroyed,monstres1,smokes1;
 
@@ -74,7 +75,7 @@
         [CCMenuItemFont  setFontName:@"Marker Felt"];
         [CCMenuItemFont  setFontSize:20];
 
-        CCSprite* bj=[CCSprite  spriteWithFile:@"6副本.jpg"];
+        CCSprite* bj=[CCSprite  spriteWithFile:@"lklkl.jpg"];
         bj.position=ccp(160, 240);
         
         [self  addChild:bj];
