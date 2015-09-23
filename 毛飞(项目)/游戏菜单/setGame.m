@@ -11,6 +11,7 @@
 #import "HelloWorldLayer.h"
 #import "Quit.h"
 #import "guanka1.h"
+#import "beibao.h"
 @implementation setGame
 -(id)init{
     if(self==[super  init]){
@@ -37,11 +38,12 @@
          [sb setIsEnabled:NO];
          CCMenuItemToggle *s=[CCMenuItemToggle  itemWithTarget:self selector:nil items:[CCMenuItemFont itemFromString:@"近程"], [CCMenuItemFont itemFromString:@"远程"],[CCMenuItemFont itemFromString:@"中程"],nil];
         CCMenuItemFont* b=[CCMenuItemFont   itemFromString:@"首页" target:self selector:@selector(back:)];
+         CCMenuItemFont* b1=[CCMenuItemFont   itemFromString:@"背包" target:self selector:@selector(go:)];
         CCMenuItemFont* r=[CCMenuItemFont itemFromString:@"进入游戏" target:self  selector:@selector(go)];
         
-        CCMenu *menu=[CCMenu menuWithItems:m1,m,f1,f,sb,s,i1,i,e1,e,b,r, nil];
+        CCMenu *menu=[CCMenu menuWithItems:m1,m,f1,f,sb,s,i1,i,e1,e,b,b1, r, nil];
         
-        [menu  alignItemsInColumns:[NSNumber  numberWithUnsignedInt:2],[NSNumber  numberWithUnsignedInt:2],[NSNumber  numberWithUnsignedInt:2],[NSNumber  numberWithUnsignedInt:2],[NSNumber  numberWithUnsignedInt:2],[NSNumber  numberWithUnsignedInt:1], [NSNumber  numberWithUnsignedInt:1], nil];
+        [menu  alignItemsInColumns:[NSNumber  numberWithUnsignedInt:2],[NSNumber  numberWithUnsignedInt:2],[NSNumber  numberWithUnsignedInt:2],[NSNumber  numberWithUnsignedInt:2],[NSNumber  numberWithUnsignedInt:2],[NSNumber  numberWithUnsignedInt:1], [NSNumber  numberWithUnsignedInt:1],[NSNumber  numberWithUnsignedInt:1], nil];
         [self  addChild:menu];
         CCParticleSystemQuad*mao=[CCParticleSystemQuad  particleWithFile:@"OneParticle.plist"];
         [self  addChild:mao];
@@ -50,6 +52,14 @@
        }
     return self;
 }
+-(void)go:(id)sender{
+    CCScene*o1=[CCScene  node];
+   beibao*layer31=[beibao  node];
+    [o1 addChild:layer31];
+    [[CCDirector   sharedDirector]replaceScene:o1];
+    
+}
+
 -(void)back:(id)sender{
     CCScene*o=[CCScene  node];
     HelloWorldLayer*layer3=[HelloWorldLayer   node];

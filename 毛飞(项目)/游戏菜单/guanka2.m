@@ -12,6 +12,7 @@
 #import "Guanka.h"
 #import "yiban.h"
 #import "guoguan.h"
+#import "zhanji.h"
 @implementation guanka2
 @synthesize monstres,smokes,monstersDestroyed;
 -(void)addMonster{
@@ -56,7 +57,7 @@
         [CCMenuItemFont  setFontName:@"Marker Felt"];
         [CCMenuItemFont  setFontSize:20];
 		CGSize size = [[CCDirector sharedDirector] winSize];
-        CCSprite* f=[CCSprite  spriteWithFile:@"1副本.png"];
+        CCSprite* f=[CCSprite  spriteWithFile:@"2213.jpg"];
         f.position=ccp(45, 100);
         [self  addChild:f];
         
@@ -69,6 +70,8 @@
         [self  addChild:menu];
 
         [self schedule:@selector(delete:)];
+        CCParticleSystemQuad*mao=[CCParticleSystemQuad  particleWithFile:@"Galaxy.plist"];
+        [self  addChild:mao];
     }
 	return self;
 }

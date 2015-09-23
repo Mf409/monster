@@ -16,18 +16,29 @@
 	if( (self=[super init])) {
         CCSprite* bj=[CCSprite  spriteWithFile:@"cv.jpg"];
         bj.position=ccp(150, 300);
-        
         [self  addChild:bj];
         
+        
+        CCLabelTTF*label=[CCLabelTTF labelWithString:@"恭喜你通关！" dimensions:CGSizeMake([UIScreen mainScreen].bounds.size.width, 300) alignment:NSTextAlignmentLeft fontName:@"Marker Felt" fontSize:25];
+        label.position=ccp(250, 180);
+        ccColor3B color = ccc3(200, 250, 126);
+        [label setColor:color];
+        [self  addChild:label];
         [CCMenuItemFont  setFontName:@"Marker Felt"];
         [CCMenuItemFont  setFontSize:20];
-        CCMenuItem* a=[CCMenuItemFont   itemFromString:@"恭喜你通关" target:self selector:nil];
-        a.position=ccp(100, 300);
-        CCMenuItem* a1=[CCMenuItemFont   itemFromString:@"退出游戏" target:self selector:@selector(over)];
-        a.position=ccp(100, 250);
-        CCMenu*  menu=[CCMenu   menuWithItems:a,a1, nil];
-        [menu   alignItemsVertically];
+        
+        
+        CCMenuItem* a3=[CCMenuItemFont   itemFromString:@"退出游戏" target:self selector:@selector(over)];
+        [a3  setIsEnabled:YES];
+        a3.position=ccp(160, 280);
+        CCMenu*  menu=[CCMenu   menuWithItems:a3, nil];
+        //以列的方式摆放
+        //[menu   alignItemsVertically];
+        [menu  alignItemsHorizontally];
+        menu.position=ccp(160, 280);
         [self  addChild:menu];
+
+  
         CCParticleSystemQuad*mao=[CCParticleSystemQuad  particleWithFile:@"LavaFlow.plist"];
         [self  addChild:mao];
         

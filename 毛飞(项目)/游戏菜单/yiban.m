@@ -12,12 +12,13 @@
 #import "Guanka.h"
 #import "SimpleAudioEngine.h"
 #import "tongguan.h"
+#import "beibao.h"
 @implementation yiban
 @synthesize monstres,smokes,monstersDestroyed,monstres1,smokes1;
 
 -(void)addMonster{
     CGSize size=[[CCDirector  sharedDirector]winSize];
-    CCSprite* monster=[CCSprite   spriteWithFile:@"3副本 2.png"];
+    CCSprite* monster=[CCSprite   spriteWithFile:@"grey.png"];
     CCSprite* monster1=[CCSprite   spriteWithFile:@"4副本 2.png"];
     [monstres  addObject:monster];
     [monstres1  addObject:monstres1];
@@ -85,7 +86,7 @@
         smokes1=[[NSMutableArray  alloc]init];
         [self setIsTouchEnabled:YES];
 		CGSize size = [[CCDirector sharedDirector] winSize];
-        CCSprite* f=[CCSprite  spriteWithFile:@"11副本.png"];
+        CCSprite* f=[CCSprite  spriteWithFile:@"01020.png"];
         f.position=ccp(35, 100);
         [self  addChild:f];
         CCMenuItemFont* b=[CCMenuItemFont   itemFromString:@"退出游戏" target:self selector:@selector(back:)];

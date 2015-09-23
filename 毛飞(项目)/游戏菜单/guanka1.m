@@ -16,6 +16,7 @@
 #import "setGame.h"
 #import "jiangli.h"
 #import "fenshu.h"
+#import "zhanji.h"
 @implementation guanka1
 @synthesize monstres,smokes,monstersDestroyed;
 -(void)addMonster{

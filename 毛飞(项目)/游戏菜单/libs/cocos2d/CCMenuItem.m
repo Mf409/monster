@@ -67,6 +67,7 @@ const uint32_t	kZoomActionTag = 0xc0c05002;
 		NSMethodSignature * sig = nil;
 
 		if( rec && cb ) {
+            NSLog(@"mf");
 			sig = [rec methodSignatureForSelector:cb];
 
 			invocation_ = nil;
@@ -215,6 +216,7 @@ const uint32_t	kZoomActionTag = 0xc0c05002;
 -(void) setLabel:(CCNode<CCLabelProtocol, CCRGBAProtocol>*) label
 {
 	if( label != label_ ) {
+        
 		[self removeChild:label_ cleanup:YES];
 		[self addChild:label];
 

@@ -10,7 +10,7 @@
 // Import the interfaces
 #import "HelloWorldLayer.h"
 #import "setGame.h"
-
+#import "zhanji.h"
 #import "NewGame.h"
 #import "Quit.h"
 #import "beibao.h"
@@ -49,14 +49,21 @@
         [[SimpleAudioEngine  sharedEngine]playBackgroundMusic:@ "yinyue.mp3"];
        //CGSize size = [[CCDirector sharedDirector] winSize];
         [self  addChild:bj];
-        //字体字号
-        [CCMenuItemFont  setFontName:@"Marker Felt"];
-        [CCMenuItemFont  setFontSize:40];
-        //[CCMenuItemFont   setVersion:40];
-         CCMenuItem* a3=[CCMenuItemFont   itemFromString:@"打怪兽" target:self selector:nil];
-        [a3  setIsEnabled:NO];
-        a3.position=ccp(100, 80);
+       
+       
+        CCLabelTTF*label=[CCLabelTTF labelWithString:@"打怪兽" dimensions:CGSizeMake([UIScreen mainScreen].bounds.size.width, 300) alignment:NSTextAlignmentLeft fontName:@"Marker Felt" fontSize:40];
+        label.position=ccp(265, 195);
+        ccColor3B color = ccc3(250, 0, 250);
+        [label setColor:color];
+        [self  addChild:label];
+      
+//         CCMenuItem* a3=[CCMenuItemFont   itemFromString:@"打怪兽" target:self selector:nil];
+//        [a3  setIsEnabled:YES];
+//        a3.position=ccp(100, 80);
         
+         //字体字号
+        [CCMenuItemFont  setFontName:@"Marker Felt"];
+        [CCMenuItemFont  setFontSize:30];
         CCMenuItem* a=[CCMenuItemFont   itemFromString:@"新游戏" target:self selector:@selector(xinyou)];//newgame
         
         CCMenuItem* b=[CCMenuItemFont   itemFromString:@"游戏设置" target:self selector:@selector(setinggame)];//setgame
@@ -65,7 +72,7 @@
         CCMenuItem* c=[CCMenuItemFont   itemFromString:@"退出游戏" target:self selector:@selector(Quit)];
         CCMenuItem* n=[CCMenuItemFont   itemFromString:@"游戏关卡" target:self selector:@selector(Guan)];
         
-        CCMenu*  menu=[CCMenu   menuWithItems:a3, a,b,n,c, nil];
+        CCMenu*  menu=[CCMenu   menuWithItems:a,b,n,c, nil];
         [menu   alignItemsVertically];
         [self  addChild:menu];
         CCParticleSystemQuad*mao=[CCParticleSystemQuad  particleWithFile:@"debian.plist"];
@@ -85,7 +92,7 @@
 }
 -(void)xinyou{
     CCScene *xy=[CCScene   node];
-    NewGame *layer5=[NewGame  node];
+    zhanji*layer5=[zhanji node];
     [xy  addChild:layer5];
     [[CCDirector   sharedDirector]replaceScene:xy];
 }
