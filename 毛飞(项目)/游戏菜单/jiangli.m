@@ -62,7 +62,7 @@
         [nn show];
         
     }
-    if(buttonIndex == 0){
+    if(buttonIndex==0){
         [[CCDirector  sharedDirector]replaceScene:[beibao scene]];
 
     }

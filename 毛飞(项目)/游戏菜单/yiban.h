@@ -12,9 +12,11 @@
 #import "Guanka.h"
 #import "SimpleAudioEngine.h"
 @interface yiban : CCLayer
-@property  NSMutableArray *monstres;
-@property NSMutableArray  *smokes;
+@property (strong, nonatomic) NSMutableArray *monstres;
+@property (strong, nonatomic)NSMutableArray  *smokes;
 @property  int monstersDestroyed;
-@property  NSMutableArray *monstres1;
-@property NSMutableArray  *smokes1;
+@property (strong, nonatomic) NSMutableArray *monstres1;
+@property(strong, nonatomic) NSMutableArray  *smokes1;
+@property (strong, nonatomic) CCSprite* f;
+@property (strong, nonatomic) NSTimer *timer;
 @end

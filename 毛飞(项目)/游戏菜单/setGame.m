@@ -12,6 +12,7 @@
 #import "Quit.h"
 #import "guanka1.h"
 #import "beibao.h"
+#import "Ziliao.h"
 @implementation setGame
 -(id)init{
     if(self==[super  init]){
@@ -31,7 +32,7 @@
         CCMenuItemFont *f1=[CCMenuItemFont  itemFromString:@"属性"];
         [f1  setIsEnabled:NO];
         CCMenuItemToggle* f=[CCMenuItemToggle  itemWithTarget:self selector:nil items:[CCMenuItemFont  itemFromString:@"攻击机"],
-                             [CCMenuItemFont  itemFromString:@"轰炸机"],[CCMenuItemFont  itemFromString:@"运输机"],[CCMenuItemFont  itemFromString:@"隐形机"],nil];
+                             [CCMenuItemFont  itemFromString:@"慢速机"],[CCMenuItemFont  itemFromString:@"中速机"],[CCMenuItemFont  itemFromString:@"快速机"],nil];
         CCMenuItemFont *e1=[CCMenuItemFont   itemFromString:@"关卡"];
         [e1  setIsEnabled:NO];
         CCMenuItemToggle *e=[CCMenuItemToggle  itemWithTarget:self selector:nil items:[CCMenuItemFont itemFromString:@"容易"], [CCMenuItemFont itemFromString:@"简单"],[CCMenuItemFont itemFromString:@"一般"],nil];

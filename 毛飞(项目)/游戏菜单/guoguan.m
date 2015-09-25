@@ -17,7 +17,7 @@
 -(id) init
 {
 	if( (self=[super init])) {
-             CCSprite* bj=[CCSprite  spriteWithFile:@"cv.jpg"];
+             CCSprite* bj=[CCSprite  spriteWithFile:@"memed.jpg"];
               bj.position=ccp(150, 300);
             [self  addChild:bj];
         
@@ -40,7 +40,7 @@
         CCMenu*  menu=[CCMenu   menuWithItems:a9, a1,a2,a0, nil];
         [menu   alignItemsVertically];
         [self  addChild:menu];
-        CCParticleSystemQuad*mao=[CCParticleSystemQuad  particleWithFile:@"Upsidedown.plist"];
+        CCParticleSystemQuad*mao=[CCParticleSystemQuad  particleWithFile:@"Phoenix.plist"];
         [self  addChild:mao];
     }  
     return self;

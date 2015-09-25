@@ -170,6 +170,18 @@
 		84FDDB4D1B2142F60088F9EB /* 6abc.png in Resources */ = {isa = PBXBuildFile; fileRef = 84FDDB451B2142F60088F9EB /* 6abc.png */; };
 		84FDDD091B2154E10088F9EB /* beijing.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 84FDDD071B2154E10088F9EB /* beijing.mp3 */; };
 		85876AA71BAFAF260028B0AF /* l.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 85876AA61BAFAF260028B0AF /* l.jpg */; };
+		859BD1D61BB4DF9100E44021 /* Ziliao.m in Sources */ = {isa = PBXBuildFile; fileRef = 859BD1D51BB4DF9100E44021 /* Ziliao.m */; };
+		859BD1DC1BB4E4B500E44021 /* balabala.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 859BD1D71BB4E4B500E44021 /* balabala.jpg */; };
+		859BD1DD1BB4E4B500E44021 /* hehe2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 859BD1D81BB4E4B500E44021 /* hehe2.jpg */; };
+		859BD1DE1BB4E4B500E44021 /* her.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 859BD1D91BB4E4B500E44021 /* her.jpg */; };
+		859BD1DF1BB4E4B500E44021 /* me0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 859BD1DA1BB4E4B500E44021 /* me0.jpg */; };
+		859BD1E01BB4E4B500E44021 /* mnbv.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 859BD1DB1BB4E4B500E44021 /* mnbv.jpg */; };
+		859BD1E21BB4F98A00E44021 /* fefe.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 859BD1E11BB4F98A00E44021 /* fefe.jpg */; };
+		859BD1E51BB51B4700E44021 /* ZiliaoTow.m in Sources */ = {isa = PBXBuildFile; fileRef = 859BD1E41BB51B4700E44021 /* ZiliaoTow.m */; };
+		859BD1E81BB5208200E44021 /* kikil.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 859BD1E61BB5208200E44021 /* kikil.jpg */; };
+		859BD1E91BB5208200E44021 /* ololk.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 859BD1E71BB5208200E44021 /* ololk.jpg */; };
+		859BD1EB1BB522D100E44021 /* mujkl.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 859BD1EA1BB522D100E44021 /* mujkl.jpg */; };
+		859BD1EE1BB5231F00E44021 /* Ziliaothree.m in Sources */ = {isa = PBXBuildFile; fileRef = 859BD1ED1BB5231F00E44021 /* Ziliaothree.m */; };
 		859C381F1BB237E300AA208F /* 01020.png in Resources */ = {isa = PBXBuildFile; fileRef = 859C381E1BB237E300AA208F /* 01020.png */; };
 		859C38211BB23FFE00AA208F /* grey.png in Resources */ = {isa = PBXBuildFile; fileRef = 859C38201BB23FFE00AA208F /* grey.png */; };
 		859C38231BB2442900AA208F /* fffg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 859C38221BB2442900AA208F /* fffg.jpg */; };
@@ -184,6 +196,7 @@
 		85A2298E1BB0F18200BE0C7E /* dff.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 85A2298D1BB0F18200BE0C7E /* dff.jpg */; };
 		85A229921BB0F95400BE0C7E /* kil.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 85A229911BB0F95400BE0C7E /* kil.jpg */; };
 		85A229941BB0FC0800BE0C7E /* 2213.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 85A229931BB0FC0800BE0C7E /* 2213.jpg */; };
+		85B3E8121BB3E7E800155FF2 /* memed.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 85B3E8111BB3E7E800155FF2 /* memed.jpg */; };
 		85EF7A771BB12898009849FC /* zhanji.m in Sources */ = {isa = PBXBuildFile; fileRef = 85EF7A761BB12898009849FC /* zhanji.m */; };
 		85EF7A791BB12B64009849FC /* mjk.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 85EF7A781BB12B64009849FC /* mjk.jpg */; };
 		E661E2451BA68E96002F82AA /* jiangli.m in Sources */ = {isa = PBXBuildFile; fileRef = E661E2441BA68E96002F82AA /* jiangli.m */; };
@@ -483,6 +496,21 @@
 		84FDDB451B2142F60088F9EB /* 6abc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 6abc.png; sourceTree = SOURCE_ROOT; };
 		84FDDD071B2154E10088F9EB /* beijing.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = beijing.mp3; sourceTree = SOURCE_ROOT; };
 		85876AA61BAFAF260028B0AF /* l.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = l.jpg; sourceTree = "<group>"; };
+		859BD1D41BB4DF9100E44021 /* Ziliao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ziliao.h; sourceTree = "<group>"; };
+		859BD1D51BB4DF9100E44021 /* Ziliao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ziliao.m; sourceTree = "<group>"; };
+		859BD1D71BB4E4B500E44021 /* balabala.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = balabala.jpg; sourceTree = "<group>"; };
+		859BD1D81BB4E4B500E44021 /* hehe2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hehe2.jpg; sourceTree = "<group>"; };
+		859BD1D91BB4E4B500E44021 /* her.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = her.jpg; sourceTree = "<group>"; };
+		859BD1DA1BB4E4B500E44021 /* me0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = me0.jpg; sourceTree = "<group>"; };
+		859BD1DB1BB4E4B500E44021 /* mnbv.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mnbv.jpg; sourceTree = "<group>"; };
+		859BD1E11BB4F98A00E44021 /* fefe.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fefe.jpg; sourceTree = "<group>"; };
+		859BD1E31BB51B4700E44021 /* ZiliaoTow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZiliaoTow.h; sourceTree = "<group>"; };
+		859BD1E41BB51B4700E44021 /* ZiliaoTow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZiliaoTow.m; sourceTree = "<group>"; };
+		859BD1E61BB5208200E44021 /* kikil.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = kikil.jpg; sourceTree = "<group>"; };
+		859BD1E71BB5208200E44021 /* ololk.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ololk.jpg; sourceTree = "<group>"; };
+		859BD1EA1BB522D100E44021 /* mujkl.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mujkl.jpg; sourceTree = "<group>"; };
+		859BD1EC1BB5231F00E44021 /* Ziliaothree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ziliaothree.h; sourceTree = "<group>"; };
+		859BD1ED1BB5231F00E44021 /* Ziliaothree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ziliaothree.m; sourceTree = "<group>"; };
 		859C381E1BB237E300AA208F /* 01020.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 01020.png; sourceTree = "<group>"; };
 		859C38201BB23FFE00AA208F /* grey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = grey.png; sourceTree = "<group>"; };
 		859C38221BB2442900AA208F /* fffg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fffg.jpg; sourceTree = "<group>"; };
@@ -499,6 +527,7 @@
 		85A2298D1BB0F18200BE0C7E /* dff.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dff.jpg; sourceTree = "<group>"; };
 		85A229911BB0F95400BE0C7E /* kil.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = kil.jpg; sourceTree = "<group>"; };
 		85A229931BB0FC0800BE0C7E /* 2213.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2213.jpg; sourceTree = "<group>"; };
+		85B3E8111BB3E7E800155FF2 /* memed.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = memed.jpg; sourceTree = "<group>"; };
 		85EF7A751BB12898009849FC /* zhanji.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zhanji.h; sourceTree = "<group>"; };
 		85EF7A761BB12898009849FC /* zhanji.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = zhanji.m; sourceTree = "<group>"; };
 		85EF7A781BB12B64009849FC /* mjk.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mjk.jpg; sourceTree = "<group>"; };
@@ -638,6 +667,12 @@
 				85A229871BB0DB3000BE0C7E /* fenshu.m */,
 				859C38241BB249E000AA208F /* paihangbang.h */,
 				859C38251BB249E000AA208F /* paihangbang.m */,
+				859BD1D41BB4DF9100E44021 /* Ziliao.h */,
+				859BD1D51BB4DF9100E44021 /* Ziliao.m */,
+				859BD1E31BB51B4700E44021 /* ZiliaoTow.h */,
+				859BD1E41BB51B4700E44021 /* ZiliaoTow.m */,
+				859BD1EC1BB5231F00E44021 /* Ziliaothree.h */,
+				859BD1ED1BB5231F00E44021 /* Ziliaothree.m */,
 				84E64B361B141CBB007EEA6F /* guanka2.h */,
 				84E64B371B141CBB007EEA6F /* guanka2.m */,
 				84ED92C91B1EB1D6002D0D37 /* yiban.h */,
@@ -936,6 +971,16 @@
 		84C2D9E01B33C95800517B80 /* 图片副本 */ = {
 			isa = PBXGroup;
 			children = (
+				859BD1EA1BB522D100E44021 /* mujkl.jpg */,
+				859BD1E61BB5208200E44021 /* kikil.jpg */,
+				859BD1E71BB5208200E44021 /* ololk.jpg */,
+				859BD1E11BB4F98A00E44021 /* fefe.jpg */,
+				859BD1D71BB4E4B500E44021 /* balabala.jpg */,
+				859BD1D81BB4E4B500E44021 /* hehe2.jpg */,
+				859BD1D91BB4E4B500E44021 /* her.jpg */,
+				859BD1DA1BB4E4B500E44021 /* me0.jpg */,
+				859BD1DB1BB4E4B500E44021 /* mnbv.jpg */,
+				85B3E8111BB3E7E800155FF2 /* memed.jpg */,
 				859C382D1BB285FE00AA208F /* lklkl.jpg */,
 				859C382B1BB2830C00AA208F /* 409.png */,
 				859C38291BB2822E00AA208F /* cvvc.jpg */,
@@ -1027,18 +1072,23 @@
 			files = (
 				859C382E1BB285FE00AA208F /* lklkl.jpg in Resources */,
 				84A207E21AEF34D300AB3A55 /* Default.png in Resources */,
+				859BD1DE1BB4E4B500E44021 /* her.jpg in Resources */,
 				84A207E41AEF34D300AB3A55 /* Default@2x.png in Resources */,
 				84A207E61AEF34D300AB3A55 /* Default-568h@2x.png in Resources */,
 				84A207E81AEF34D300AB3A55 /* fps_images.png in Resources */,
 				84A207EA1AEF34D300AB3A55 /* Icon-72.png in Resources */,
+				859BD1DC1BB4E4B500E44021 /* balabala.jpg in Resources */,
 				84A207EC1AEF34D300AB3A55 /* Icon-Small-50.png in Resources */,
 				85A229941BB0FC0800BE0C7E /* 2213.jpg in Resources */,
 				84A207EE1AEF34D300AB3A55 /* Icon-Small.png in Resources */,
 				84A207F01AEF34D300AB3A55 /* Icon-Small@2x.png in Resources */,
 				84A207F21AEF34D300AB3A55 /* Icon.png in Resources */,
 				E6E0B5C91BAA48440018764F /* 201.jpg in Resources */,
+				859BD1E01BB4E4B500E44021 /* mnbv.jpg in Resources */,
+				85B3E8121BB3E7E800155FF2 /* memed.jpg in Resources */,
 				859C38211BB23FFE00AA208F /* grey.png in Resources */,
 				E6E0B5CA1BAA48440018764F /* 202.jpg in Resources */,
+				859BD1DD1BB4E4B500E44021 /* hehe2.jpg in Resources */,
 				859C38281BB24B1B00AA208F /* mffm.jpg in Resources */,
 				84A207F41AEF34D300AB3A55 /* Icon@2x.png in Resources */,
 				85A2298E1BB0F18200BE0C7E /* dff.jpg in Resources */,
@@ -1051,10 +1101,13 @@
 				84ED91491B1E9BC3002D0D37 /* sbsb.mp3 in Resources */,
 				E6E0B5CB1BAA48440018764F /* 203.jpg in Resources */,
 				84FDDB4C1B2142F60088F9EB /* 0abc.mp3 in Resources */,
+				859BD1DF1BB4E4B500E44021 /* me0.jpg in Resources */,
 				859C381F1BB237E300AA208F /* 01020.png in Resources */,
 				84FDDB4D1B2142F60088F9EB /* 6abc.png in Resources */,
 				84FDDD091B2154E10088F9EB /* beijing.mp3 in Resources */,
+				859BD1E91BB5208200E44021 /* ololk.jpg in Resources */,
 				848F62B11B311506007AFE91 /* BoilingFoam.plist in Resources */,
+				859BD1EB1BB522D100E44021 /* mujkl.jpg in Resources */,
 				848F62B21B311506007AFE91 /* BurstPipe.plist in Resources */,
 				848F62B31B311506007AFE91 /* Comet.plist in Resources */,
 				848F62B41B311506007AFE91 /* debian.plist in Resources */,
@@ -1068,6 +1121,7 @@
 				E6E0B5C41BAA46A40018764F /* beibao.xib in Resources */,
 				E661E2471BA68FB4002F82AA /* jiangli.xib in Resources */,
 				E6E0B5CC1BAA48440018764F /* 204.jpg in Resources */,
+				859BD1E81BB5208200E44021 /* kikil.jpg in Resources */,
 				848F62BB1B311506007AFE91 /* SparkParticle.plist in Resources */,
 				848F62BC1B311506007AFE91 /* SpinningPeas.plist in Resources */,
 				848F62BD1B311506007AFE91 /* Spiral.plist in Resources */,
@@ -1080,6 +1134,7 @@
 				84C2D9F01B33C95800517B80 /* 10副本.png in Resources */,
 				84C2D9F81B33C95800517B80 /* 5副本.jpg in Resources */,
 				84EB2C131B38FA9B006BDAAF /* yinyue.mp3 in Resources */,
+				859BD1E21BB4F98A00E44021 /* fefe.jpg in Resources */,
 				85876AA71BAFAF260028B0AF /* l.jpg in Resources */,
 				85EF7A791BB12B64009849FC /* mjk.jpg in Resources */,
 				84EB2C141B38FA9B006BDAAF /* zidan.mp3 in Resources */,
@@ -1147,6 +1202,7 @@
 				84A208641AEF34D400AB3A55 /* CCParticleSystem.m in Sources */,
 				85EF7A771BB12898009849FC /* zhanji.m in Sources */,
 				84A208671AEF34D400AB3A55 /* CCParticleSystemPoint.m in Sources */,
+				859BD1D61BB4DF9100E44021 /* Ziliao.m in Sources */,
 				84A2086A1AEF34D400AB3A55 /* CCParticleSystemQuad.m in Sources */,
 				84A2086D1AEF34D400AB3A55 /* CCPhysicsDebugNode.m in Sources */,
 				84A208701AEF34D400AB3A55 /* CCPhysicsSprite.mm in Sources */,
@@ -1183,8 +1239,10 @@
 				84A208D31AEF34D500AB3A55 /* CCEventDispatcher.m in Sources */,
 				84A208D61AEF34D500AB3A55 /* MacGLView.m in Sources */,
 				84A208D91AEF34D500AB3A55 /* MacWindow.m in Sources */,
+				859BD1EE1BB5231F00E44021 /* Ziliaothree.m in Sources */,
 				84A208DC1AEF34D500AB3A55 /* base64.c in Sources */,
 				84A208E01AEF34D500AB3A55 /* CCArray.m in Sources */,
+				859BD1E51BB51B4700E44021 /* ZiliaoTow.m in Sources */,
 				859C38261BB249E000AA208F /* paihangbang.m in Sources */,
 				84A208E41AEF34D500AB3A55 /* CCFileUtils.m in Sources */,
 				84A208E71AEF34D500AB3A55 /* CCProfiling.m in Sources */,

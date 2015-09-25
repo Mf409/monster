@@ -57,12 +57,14 @@
         CCSprite* bj=[CCSprite  spriteWithFile:@"5副本.jpg"];
         bj.position=ccp(160, 240);
         [self  addChild:bj];
+        
+        
          //飞机位置
-        CGSize size = [[CCDirector sharedDirector] winSize];
-        CCSprite* f=[CCSprite  spriteWithFile:@"10副本.png"];
-        f.position=ccp(100, 100);
-        [self  addChild:f];                   
-        [self  schedule:@selector(gameLogic:)interval:1.0];
+        _f=[CCSprite  spriteWithFile:@"10副本.png"];
+        _f.position=ccp(100, 100);
+        [self  addChild:_f];
+        //怪兽出来的速度(多少)
+        [self  schedule:@selector(gameLogic:)interval:0.15];
         
         
         CCMenuItemFont* b=[CCMenuItemFont   itemFromString:@"退出游戏" target:self selector:@selector(back:)];
@@ -72,7 +74,8 @@
         [menu  alignItemsInColumns:[NSNumber  numberWithUnsignedInt:1],nil];
         [self  addChild:menu];
           [self schedule:@selector(delete:)];
-        
+        //子弹的时间
+         _timer=[NSTimer scheduledTimerWithTimeInterval:0.15 target:self selector:@selector(shoot) userInfo:nil repeats:YES];
 
 
     }
@@ -90,30 +93,29 @@
     [self  addMonster];
     
 }
--(void)ccTouchesEnded:(NSSet *)touches withEvent:(UIEvent *)event{
-    UITouch *touch=[touches anyObject];
-    //鼠标位置
-    CGPoint  location=[self  convertTouchToNodeSpace:touch];
-    CGSize size=[[CCDirector  sharedDirector]winSize];
+//飞机移动（滑动）
+- (void)ccTouchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
+    UITouch* touch = [touches anyObject];
+    CGPoint location = [self convertTouchToNodeSpace: touch];
+    if (_f) {
+        _f.position=ccp(location.x, location.y);
+    }}
+- (void)shoot {
     CCSprite  *smoke=[CCSprite  spriteWithFile:@"14副本.png"];
     smoke.position=ccp(300, 100);
     [smokes  addObject:smoke];
     //子弹声音特效
     [[SimpleAudioEngine sharedEngine]playEffect:@"yinyue.mp3"];
-
+    
     //子弹位置
-    smoke.position=ccp(20,size.height/3);
-    //偏移
-    CGPoint offset=ccpSub(location, smoke.position);
-    if (offset.x<0) {
-        return;
+    if (_f) {
+        smoke.position=ccp(_f.position.x,_f.position.y+50);
     }
     [self addChild:smoke];
     //x坐标
-    int realx=size.width+smoke.contentSize.width/2;
-    float  r=offset.y/offset.x;
+    int realx=smoke.position.x;
     //y坐标
-    int  realy=realx*r+smoke.position.y;
+    int  realy=[UIScreen mainScreen].bounds.size.height + smoke.contentSize.height;
     //最终位置
     CGPoint realdest=ccp(realx, realy);
     int m1=realx-smoke.position.x;
@@ -126,10 +128,11 @@
     CCCallBlockN* movedone=[CCCallBlockN  actionWithBlock:^(CCNode*node){
         [node removeAllChildrenWithCleanup:YES];}];
     [smoke  runAction:[CCSequence  actions:moveto,movedone, nil]];
-    
 }
+
+
 //打中怪兽消失
--(void)delete:(ccTime)de{
+-(void)delete:(id)de{
     //存放消失的怪兽
     NSMutableArray *smokesToDelete=[[NSMutableArray  alloc]init];
     for(CCSprite *smoke in smokes){
@@ -147,7 +150,7 @@
             [self removeChild:monster cleanup:YES];
             //打够9个怪兽、跳转下一个场景
             monstersDestroyed=monstersDestroyed+1;
-            if(monstersDestroyed>5){
+            if(monstersDestroyed>30){
                 CCScene*mmm=[CCScene  node];
                 guoguan*layer=[guoguan node];
                 [mmm  addChild:layer];
@@ -163,10 +166,22 @@
             [smokes removeObject:smoke];
             [self removeChild:smoke cleanup:YES];
         }
-    
-    
-    
-    
-}
+    //判断飞机于怪兽碰撞时飞机消失
+    for(CCSprite *monster in monstres){
+        if (_f) {
+            if (CGRectIntersectsRect(_f.boundingBox, monster.boundingBox)) {
+                //[self removeChild:monster cleanup:YES];
+                [_timer invalidate];
+                _timer = nil;
+                [self performSelector:@selector(destroyFly) withObject:nil afterDelay:0.2];
+            }
+        }
+    }
 
+}
+//判断飞机是否存在（重新定义飞机为空）
+- (void)destroyFly {
+    [self removeChild:_f cleanup:YES];
+    _f = nil;
+}
 @end

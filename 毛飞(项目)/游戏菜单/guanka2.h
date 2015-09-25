@@ -12,7 +12,9 @@
 #import "Guanka.h"
 #import "SimpleAudioEngine.h"
 @interface guanka2 : CCLayer
-@property  NSMutableArray *monstres;
-@property NSMutableArray  *smokes;
+@property (strong, nonatomic) NSMutableArray *monstres;
+@property ( strong, nonatomic) NSMutableArray  *smokes;
 @property  int monstersDestroyed;
+@property (strong, nonatomic) CCSprite* f;
+@property (strong, nonatomic) NSTimer *timer;
 @end
