@@ -51,9 +51,6 @@
         id action601 = [CCBlink actionWithDuration:4 blinks:5];
         id action201=[bj  runAction:[CCPlace  actionWithPosition:o11]];
         [bj1 runAction:[CCSequence  actions:action201,action601,  nil]];
-
-        
-        
         [self  addChild:bj1];
   
         CCMenuItemFont* button=[CCMenuItemFont   itemFromString:@"远程战机" target:self selector:nil];
@@ -97,11 +94,11 @@
         [b  setIsEnabled:YES];
         CCMenuItemFont* b1=[CCMenuItemFont   itemFromString:@"进入游戏" target:self selector:@selector(to:)];
         [b1  setIsEnabled:YES];
-      CCMenu *menu=[CCMenu menuWithItems:b,b1, nil];
+        CCMenu *menu=[CCMenu menuWithItems:b,b1, nil];
         menu.position=ccp(250, 40);
         [menu  alignItemsInColumns:[NSNumber  numberWithUnsignedInt:1],[NSNumber  numberWithUnsignedInt:1],nil];
         [self  addChild:menu];
-        [menu   alignItemsVertically];
+        [menu   alignItemsHorizontally];
         CCParticleSystemQuad*mao=[CCParticleSystemQuad  particleWithFile:@"Galaxy.plist"];
         [self  addChild:mao];
 

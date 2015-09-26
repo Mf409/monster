@@ -60,7 +60,7 @@
         _f.position=ccp(100, 100);
         [self  addChild:_f];
         
-        [self  schedule:@selector(gameLogic:)interval:0.5];
+        [self  schedule:@selector(gameLogic:)interval:0.15];
         CCMenuItemFont* b=[CCMenuItemFont   itemFromString:@"退出游戏" target:self selector:@selector(back:)];
         [b  setIsEnabled:YES];
         CCMenu *menu=[CCMenu menuWithItems:b, nil];

@@ -13,6 +13,7 @@
 #import "guanka1.h"
 #import "beibao.h"
 #import "Ziliao.h"
+#import "shengjibaoku.h"
 @implementation setGame
 -(id)init{
     if(self==[super  init]){
@@ -45,7 +46,7 @@
         
         CCMenuItemFont *sob=[CCMenuItemFont   itemFromString:@"游戏模式"];
         [sob setIsEnabled:NO];
-        CCMenuItemToggle *so=[CCMenuItemToggle  itemWithTarget:self selector:nil items:[CCMenuItemFont itemFromString:@"闯关模式"], [CCMenuItemFont itemFromString:@"无尽模式"],[CCMenuItemFont itemFromString:@"晋级模式"],nil];
+        CCMenuItemToggle *so=[CCMenuItemToggle  itemWithTarget:self selector:nil items:[CCMenuItemFont itemFromString:@"闯关模式"], [CCMenuItemFont itemFromString:@"无尽模式"],[CCMenuItemFont itemFromString:@"BOSS模式"],nil];
         
         
         CCMenuItemFont* b=[CCMenuItemFont   itemFromString:@"首页" target:self selector:@selector(back:)];

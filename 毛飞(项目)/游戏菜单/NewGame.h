@@ -12,8 +12,8 @@
 #import "HelloWorldLayer.h"
 #import "setGame.h"
 @interface NewGame : CCLayer
-@property  NSMutableArray *monstres;
-@property NSMutableArray  *smokes;
+@property (nonatomic,strong) NSMutableArray *monstres;
+@property(nonatomic,strong) NSMutableArray  *smokes;
 @property  int monstersDestroyed;
 
 @end

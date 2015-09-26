@@ -18,6 +18,8 @@
 #import "Guanka.h"
 #import "SimpleAudioEngine.h"
 #import "paihangbang.h"
+#import "help.h"
+#import "shengjibaoku.h"
 // HelloWorldLayer implementation
 @implementation HelloWorldLayer
 
@@ -52,7 +54,7 @@
        
        
         CCLabelTTF*label=[CCLabelTTF labelWithString:@"打怪兽" dimensions:CGSizeMake([UIScreen mainScreen].bounds.size.width, 300) alignment:NSTextAlignmentLeft fontName:@"Marker Felt" fontSize:40];
-        label.position=ccp(265, 220);
+        label.position=ccp(265, 255);
         ccColor3B color = ccc3(250, 0, 250);
         [label setColor:color];
         [self  addChild:label];
@@ -66,13 +68,19 @@
         
          CCMenuItem* p=[CCMenuItemFont   itemFromString:@"排行榜" target:self selector:@selector(bang)];
         
+         CCMenuItem* eb=[CCMenuItemFont   itemFromString:@"游戏帮助" target:self selector:@selector(help)];
+        
         CCMenuItem* b=[CCMenuItemFont   itemFromString:@"游戏设置" target:self selector:@selector(setinggame)];//setgame
        
        
         CCMenuItem* c=[CCMenuItemFont   itemFromString:@"退出游戏" target:self selector:@selector(Quit)];
+        
+        CCMenuItem* g=[CCMenuItemFont   itemFromString:@"升级宝库" target:self selector:@selector(shengjibaoku)];
+        
+        
         CCMenuItem* n=[CCMenuItemFont   itemFromString:@"游戏关卡" target:self selector:@selector(Guan)];
         
-        CCMenu*  menu=[CCMenu   menuWithItems:a,p,  b,n,c, nil];
+        CCMenu*  menu=[CCMenu   menuWithItems:a,p, eb, b,g,n, c, nil];
         [menu   alignItemsVertically];
         [self  addChild:menu];
         CCParticleSystemQuad*mao=[CCParticleSystemQuad  particleWithFile:@"debian.plist"];
@@ -112,6 +120,20 @@
 -(void)bang{
     CCScene*r=[CCScene  node];
     paihangbang*layer11=[paihangbang  node];
+    
+    [r addChild:layer11];
+    [[CCDirector  sharedDirector]replaceScene:r];
+}
+-(void)help{
+    CCScene*r=[CCScene  node];
+    help*layer11=[help  node];
+    
+    [r addChild:layer11];
+    [[CCDirector  sharedDirector]replaceScene:r];
+}
+-(void)shengjibaoku{
+    CCScene*r=[CCScene  node];
+    shengjibaoku*layer11=[shengjibaoku  node];
     
     [r addChild:layer11];
     [[CCDirector  sharedDirector]replaceScene:r];

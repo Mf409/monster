@@ -11,7 +11,9 @@
 #import "Guanka.h"
 #import "HelloWorldLayer.h"
 #import "setGame.h"
+
 @interface guanka1 : CCLayer
++(CCScene *) scene;
 @property(strong, nonatomic)  NSMutableArray *monstres;
 @property (strong, nonatomic)NSMutableArray  *smokes;
 @property  int monstersDestroyed;

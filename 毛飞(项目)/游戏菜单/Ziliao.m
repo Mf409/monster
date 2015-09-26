@@ -19,10 +19,11 @@
         bj.position=ccp(160, 280);
         [self  addChild:bj];
         
-        CGPoint o=ccp(50, 410);
+        
         CCSprite* bj1=[CCSprite  spriteWithFile:@"her.jpg"];
         bj1.position=ccp(50, 410);
         //图片效果
+        CGPoint o=ccp(50, 410);
        id action6 = [CCBlink actionWithDuration:1.5 blinks:5];
         id action=[bj1  runAction:[CCPlace  actionWithPosition:o]];
         [bj1 runAction:[CCSequence  actions:action,action6,  nil]];

@@ -97,8 +97,8 @@
         menu.position=ccp(250, 80);
         [menu  alignItemsInColumns:[NSNumber  numberWithUnsignedInt:1],nil];
         [self  addChild:menu];
-
-        [self  schedule:@selector(gameLogic:)interval:0.5];
+//怪兽出现的速度
+        [self  schedule:@selector(gameLogic:)interval:0.05];
         [self schedule:@selector(delete:)];
         _timer= [NSTimer scheduledTimerWithTimeInterval:0.15 target:self selector:@selector(shoot) userInfo:nil repeats:YES];
     }

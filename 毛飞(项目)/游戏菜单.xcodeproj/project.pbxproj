@@ -196,6 +196,12 @@
 		85A2298E1BB0F18200BE0C7E /* dff.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 85A2298D1BB0F18200BE0C7E /* dff.jpg */; };
 		85A229921BB0F95400BE0C7E /* kil.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 85A229911BB0F95400BE0C7E /* kil.jpg */; };
 		85A229941BB0FC0800BE0C7E /* 2213.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 85A229931BB0FC0800BE0C7E /* 2213.jpg */; };
+		85A41B7B1BB62EA1002A8FA2 /* help.m in Sources */ = {isa = PBXBuildFile; fileRef = 85A41B7A1BB62EA1002A8FA2 /* help.m */; };
+		85A41B7D1BB630CD002A8FA2 /* help.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 85A41B7C1BB630CD002A8FA2 /* help.jpg */; };
+		85A41B801BB63DFE002A8FA2 /* shengjibaoku.m in Sources */ = {isa = PBXBuildFile; fileRef = 85A41B7F1BB63DFE002A8FA2 /* shengjibaoku.m */; };
+		85A41B851BB63FF8002A8FA2 /* sj1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 85A41B821BB63FF8002A8FA2 /* sj1.jpg */; };
+		85A41B881BB647B5002A8FA2 /* sj2.png in Resources */ = {isa = PBXBuildFile; fileRef = 85A41B871BB647B5002A8FA2 /* sj2.png */; };
+		85A41B8C1BB64B7E002A8FA2 /* nhjtyjed.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 85A41B8B1BB64B7E002A8FA2 /* nhjtyjed.jpg */; };
 		85B3E8121BB3E7E800155FF2 /* memed.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 85B3E8111BB3E7E800155FF2 /* memed.jpg */; };
 		85EF7A771BB12898009849FC /* zhanji.m in Sources */ = {isa = PBXBuildFile; fileRef = 85EF7A761BB12898009849FC /* zhanji.m */; };
 		85EF7A791BB12B64009849FC /* mjk.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 85EF7A781BB12B64009849FC /* mjk.jpg */; };
@@ -527,6 +533,14 @@
 		85A2298D1BB0F18200BE0C7E /* dff.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dff.jpg; sourceTree = "<group>"; };
 		85A229911BB0F95400BE0C7E /* kil.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = kil.jpg; sourceTree = "<group>"; };
 		85A229931BB0FC0800BE0C7E /* 2213.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2213.jpg; sourceTree = "<group>"; };
+		85A41B791BB62EA1002A8FA2 /* help.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = help.h; sourceTree = "<group>"; };
+		85A41B7A1BB62EA1002A8FA2 /* help.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = help.m; sourceTree = "<group>"; };
+		85A41B7C1BB630CD002A8FA2 /* help.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = help.jpg; sourceTree = "<group>"; };
+		85A41B7E1BB63DFE002A8FA2 /* shengjibaoku.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = shengjibaoku.h; sourceTree = "<group>"; };
+		85A41B7F1BB63DFE002A8FA2 /* shengjibaoku.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = shengjibaoku.m; sourceTree = "<group>"; };
+		85A41B821BB63FF8002A8FA2 /* sj1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sj1.jpg; sourceTree = "<group>"; };
+		85A41B871BB647B5002A8FA2 /* sj2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sj2.png; sourceTree = "<group>"; };
+		85A41B8B1BB64B7E002A8FA2 /* nhjtyjed.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = nhjtyjed.jpg; sourceTree = "<group>"; };
 		85B3E8111BB3E7E800155FF2 /* memed.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = memed.jpg; sourceTree = "<group>"; };
 		85EF7A751BB12898009849FC /* zhanji.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zhanji.h; sourceTree = "<group>"; };
 		85EF7A761BB12898009849FC /* zhanji.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = zhanji.m; sourceTree = "<group>"; };
@@ -661,8 +675,14 @@
 				848C2F8C1B0C2D850096FA6D /* Guanka.m */,
 				848C2F901B0C2E700096FA6D /* guanka1.h */,
 				848C2F911B0C2E700096FA6D /* guanka1.m */,
+				84E64B361B141CBB007EEA6F /* guanka2.h */,
+				84E64B371B141CBB007EEA6F /* guanka2.m */,
+				84ED92C91B1EB1D6002D0D37 /* yiban.h */,
+				84ED92CA1B1EB1D6002D0D37 /* yiban.m */,
 				840FF68B1B1D5D7300C5A0DD /* guoguan.h */,
 				840FF68C1B1D5D7300C5A0DD /* guoguan.m */,
+				84A5FA7C1B3A4E6E002A8FC8 /* tongguan.h */,
+				84A5FA7D1B3A4E6E002A8FC8 /* tongguan.m */,
 				85A229861BB0DB3000BE0C7E /* fenshu.h */,
 				85A229871BB0DB3000BE0C7E /* fenshu.m */,
 				859C38241BB249E000AA208F /* paihangbang.h */,
@@ -673,12 +693,10 @@
 				859BD1E41BB51B4700E44021 /* ZiliaoTow.m */,
 				859BD1EC1BB5231F00E44021 /* Ziliaothree.h */,
 				859BD1ED1BB5231F00E44021 /* Ziliaothree.m */,
-				84E64B361B141CBB007EEA6F /* guanka2.h */,
-				84E64B371B141CBB007EEA6F /* guanka2.m */,
-				84ED92C91B1EB1D6002D0D37 /* yiban.h */,
-				84ED92CA1B1EB1D6002D0D37 /* yiban.m */,
-				84A5FA7C1B3A4E6E002A8FC8 /* tongguan.h */,
-				84A5FA7D1B3A4E6E002A8FC8 /* tongguan.m */,
+				85A41B7E1BB63DFE002A8FA2 /* shengjibaoku.h */,
+				85A41B7F1BB63DFE002A8FA2 /* shengjibaoku.m */,
+				85A41B791BB62EA1002A8FA2 /* help.h */,
+				85A41B7A1BB62EA1002A8FA2 /* help.m */,
 				E661E2431BA68E96002F82AA /* jiangli.h */,
 				E661E2441BA68E96002F82AA /* jiangli.m */,
 				E661E2461BA68FB4002F82AA /* jiangli.xib */,
@@ -971,6 +989,10 @@
 		84C2D9E01B33C95800517B80 /* 图片副本 */ = {
 			isa = PBXGroup;
 			children = (
+				85A41B8B1BB64B7E002A8FA2 /* nhjtyjed.jpg */,
+				85A41B871BB647B5002A8FA2 /* sj2.png */,
+				85A41B821BB63FF8002A8FA2 /* sj1.jpg */,
+				85A41B7C1BB630CD002A8FA2 /* help.jpg */,
 				859BD1EA1BB522D100E44021 /* mujkl.jpg */,
 				859BD1E61BB5208200E44021 /* kikil.jpg */,
 				859BD1E71BB5208200E44021 /* ololk.jpg */,
@@ -1070,6 +1092,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85A41B851BB63FF8002A8FA2 /* sj1.jpg in Resources */,
 				859C382E1BB285FE00AA208F /* lklkl.jpg in Resources */,
 				84A207E21AEF34D300AB3A55 /* Default.png in Resources */,
 				859BD1DE1BB4E4B500E44021 /* her.jpg in Resources */,
@@ -1099,6 +1122,7 @@
 				840FF6901B1D5DE500C5A0DD /* 666副本.mp3 in Resources */,
 				840FF6911B1D5DE500C5A0DD /* 6776副本.mp3 in Resources */,
 				84ED91491B1E9BC3002D0D37 /* sbsb.mp3 in Resources */,
+				85A41B881BB647B5002A8FA2 /* sj2.png in Resources */,
 				E6E0B5CB1BAA48440018764F /* 203.jpg in Resources */,
 				84FDDB4C1B2142F60088F9EB /* 0abc.mp3 in Resources */,
 				859BD1DF1BB4E4B500E44021 /* me0.jpg in Resources */,
@@ -1122,6 +1146,7 @@
 				E661E2471BA68FB4002F82AA /* jiangli.xib in Resources */,
 				E6E0B5CC1BAA48440018764F /* 204.jpg in Resources */,
 				859BD1E81BB5208200E44021 /* kikil.jpg in Resources */,
+				85A41B8C1BB64B7E002A8FA2 /* nhjtyjed.jpg in Resources */,
 				848F62BB1B311506007AFE91 /* SparkParticle.plist in Resources */,
 				848F62BC1B311506007AFE91 /* SpinningPeas.plist in Resources */,
 				848F62BD1B311506007AFE91 /* Spiral.plist in Resources */,
@@ -1146,6 +1171,7 @@
 				859C38231BB2442900AA208F /* fffg.jpg in Resources */,
 				84EB2C211B3903A6006BDAAF /* 13副本.png in Resources */,
 				84EB2C221B3903A6006BDAAF /* 14副本.png in Resources */,
+				85A41B7D1BB630CD002A8FA2 /* help.jpg in Resources */,
 				85A229921BB0F95400BE0C7E /* kil.jpg in Resources */,
 				84EB2C241B3904BD006BDAAF /* 4副本.png in Resources */,
 				84EB2C281B39068D006BDAAF /* 3副本.png in Resources */,
@@ -1198,6 +1224,7 @@
 				84A208581AEF34D400AB3A55 /* CCNode.m in Sources */,
 				84A2085B1AEF34D400AB3A55 /* CCParallaxNode.m in Sources */,
 				84A2085E1AEF34D400AB3A55 /* CCParticleBatchNode.m in Sources */,
+				85A41B7B1BB62EA1002A8FA2 /* help.m in Sources */,
 				84A208611AEF34D400AB3A55 /* CCParticleExamples.m in Sources */,
 				84A208641AEF34D400AB3A55 /* CCParticleSystem.m in Sources */,
 				85EF7A771BB12898009849FC /* zhanji.m in Sources */,
@@ -1229,6 +1256,7 @@
 				84A208AD1AEF34D400AB3A55 /* CCTransitionPageTurn.m in Sources */,
 				84A208B01AEF34D400AB3A55 /* CCTransitionRadial.m in Sources */,
 				84A208B41AEF34D400AB3A55 /* cocos2d.m in Sources */,
+				85A41B801BB63DFE002A8FA2 /* shengjibaoku.m in Sources */,
 				84A208BB1AEF34D400AB3A55 /* CCDirectorIOS.m in Sources */,
 				84A208BF1AEF34D500AB3A55 /* CCTouchDispatcher.m in Sources */,
 				84A208C21AEF34D500AB3A55 /* CCTouchHandler.m in Sources */,

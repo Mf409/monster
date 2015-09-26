@@ -17,8 +17,24 @@
 #import "jiangli.h"
 #import "fenshu.h"
 #import "zhanji.h"
+#import "help.h"
 @implementation guanka1
 @synthesize monstres,smokes,monstersDestroyed;
++(CCScene *) scene
+{
+    // 'scene' is an autorelease object.
+    CCScene *scene = [CCScene node];
+    
+    // 'layer' is an autorelease object.
+    guanka1 *layer = [guanka1 node];
+    
+    // add layer as a child to scene
+    [scene addChild: layer];
+    
+    // return the scene
+    return scene;
+}
+
 -(void)addMonster{
     CGSize size=[[CCDirector  sharedDirector]winSize];
     CCSprite* monster=[CCSprite   spriteWithFile:@"4副本.png"];
