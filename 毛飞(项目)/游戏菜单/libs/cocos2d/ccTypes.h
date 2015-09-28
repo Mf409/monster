@@ -90,6 +90,7 @@ static inline ccColor4B
 ccc4(const GLubyte r, const GLubyte g, const GLubyte b, const GLubyte o)
 {
 	ccColor4B c = {r, g, b, o};
+    
 	return c;
 }
 

@@ -95,7 +95,7 @@
         CCMenuItemFont* b1=[CCMenuItemFont   itemFromString:@"进入游戏" target:self selector:@selector(to:)];
         [b1  setIsEnabled:YES];
         CCMenu *menu=[CCMenu menuWithItems:b,b1, nil];
-        menu.position=ccp(250, 40);
+        menu.position=ccp(230, 40);
         [menu  alignItemsInColumns:[NSNumber  numberWithUnsignedInt:1],[NSNumber  numberWithUnsignedInt:1],nil];
         [self  addChild:menu];
         [menu   alignItemsHorizontally];

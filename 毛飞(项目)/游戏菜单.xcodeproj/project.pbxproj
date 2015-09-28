@@ -202,6 +202,8 @@
 		85A41B851BB63FF8002A8FA2 /* sj1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 85A41B821BB63FF8002A8FA2 /* sj1.jpg */; };
 		85A41B881BB647B5002A8FA2 /* sj2.png in Resources */ = {isa = PBXBuildFile; fileRef = 85A41B871BB647B5002A8FA2 /* sj2.png */; };
 		85A41B8C1BB64B7E002A8FA2 /* nhjtyjed.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 85A41B8B1BB64B7E002A8FA2 /* nhjtyjed.jpg */; };
+		85A41B931BB679FB002A8FA2 /* fuhuo.m in Sources */ = {isa = PBXBuildFile; fileRef = 85A41B921BB679FB002A8FA2 /* fuhuo.m */; };
+		85A41B971BB682B8002A8FA2 /* vfddd.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 85A41B961BB682B8002A8FA2 /* vfddd.jpg */; };
 		85B3E8121BB3E7E800155FF2 /* memed.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 85B3E8111BB3E7E800155FF2 /* memed.jpg */; };
 		85EF7A771BB12898009849FC /* zhanji.m in Sources */ = {isa = PBXBuildFile; fileRef = 85EF7A761BB12898009849FC /* zhanji.m */; };
 		85EF7A791BB12B64009849FC /* mjk.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 85EF7A781BB12B64009849FC /* mjk.jpg */; };
@@ -541,6 +543,9 @@
 		85A41B821BB63FF8002A8FA2 /* sj1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sj1.jpg; sourceTree = "<group>"; };
 		85A41B871BB647B5002A8FA2 /* sj2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sj2.png; sourceTree = "<group>"; };
 		85A41B8B1BB64B7E002A8FA2 /* nhjtyjed.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = nhjtyjed.jpg; sourceTree = "<group>"; };
+		85A41B911BB679FB002A8FA2 /* fuhuo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fuhuo.h; sourceTree = "<group>"; };
+		85A41B921BB679FB002A8FA2 /* fuhuo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = fuhuo.m; sourceTree = "<group>"; };
+		85A41B961BB682B8002A8FA2 /* vfddd.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = vfddd.jpg; sourceTree = "<group>"; };
 		85B3E8111BB3E7E800155FF2 /* memed.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = memed.jpg; sourceTree = "<group>"; };
 		85EF7A751BB12898009849FC /* zhanji.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zhanji.h; sourceTree = "<group>"; };
 		85EF7A761BB12898009849FC /* zhanji.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = zhanji.m; sourceTree = "<group>"; };
@@ -695,6 +700,8 @@
 				859BD1ED1BB5231F00E44021 /* Ziliaothree.m */,
 				85A41B7E1BB63DFE002A8FA2 /* shengjibaoku.h */,
 				85A41B7F1BB63DFE002A8FA2 /* shengjibaoku.m */,
+				85A41B911BB679FB002A8FA2 /* fuhuo.h */,
+				85A41B921BB679FB002A8FA2 /* fuhuo.m */,
 				85A41B791BB62EA1002A8FA2 /* help.h */,
 				85A41B7A1BB62EA1002A8FA2 /* help.m */,
 				E661E2431BA68E96002F82AA /* jiangli.h */,
@@ -989,6 +996,7 @@
 		84C2D9E01B33C95800517B80 /* 图片副本 */ = {
 			isa = PBXGroup;
 			children = (
+				85A41B961BB682B8002A8FA2 /* vfddd.jpg */,
 				85A41B8B1BB64B7E002A8FA2 /* nhjtyjed.jpg */,
 				85A41B871BB647B5002A8FA2 /* sj2.png */,
 				85A41B821BB63FF8002A8FA2 /* sj1.jpg */,
@@ -1140,6 +1148,7 @@
 				848F62B61B311506007AFE91 /* Flower.plist in Resources */,
 				848F62B71B311506007AFE91 /* Galaxy.plist in Resources */,
 				848F62B81B311506007AFE91 /* LavaFlow.plist in Resources */,
+				85A41B971BB682B8002A8FA2 /* vfddd.jpg in Resources */,
 				848F62B91B311506007AFE91 /* OneParticle.plist in Resources */,
 				848F62BA1B311506007AFE91 /* Phoenix.plist in Resources */,
 				E6E0B5C41BAA46A40018764F /* beibao.xib in Resources */,
@@ -1290,6 +1299,7 @@
 				84A2091A1AEF34D500AB3A55 /* ZFont.m in Sources */,
 				84A2091F1AEF34D500AB3A55 /* main.m in Sources */,
 				84A209221AEF34D500AB3A55 /* AppDelegate.m in Sources */,
+				85A41B931BB679FB002A8FA2 /* fuhuo.m in Sources */,
 				84A209251AEF34D500AB3A55 /* RootViewController.m in Sources */,
 				84A209281AEF34D500AB3A55 /* HelloWorldLayer.m in Sources */,
 				8449AA9F1AF0790600152C7A /* setGame.m in Sources */,

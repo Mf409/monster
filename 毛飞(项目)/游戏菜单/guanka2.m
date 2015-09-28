@@ -13,6 +13,7 @@
 #import "yiban.h"
 #import "guoguan.h"
 #import "zhanji.h"
+#import "fuhuo.h"
 @implementation guanka2
 @synthesize monstres,smokes,monstersDestroyed;
 -(void)addMonster{
@@ -32,12 +33,19 @@
     int  maxduration=5;
     int  rangeduarstion=maxduration-minduration;
     int  arcualduration=(arc4random()%rangeduarstion)+minduration;
-    //移动精灵
-    CCMoveTo* move=[CCMoveTo actionWithDuration:arcualduration position:ccp(-monster.contentSize.height/2, actualy)];
+    //移动精灵(敌机俯冲)
+    //CCMoveTo* move=[CCMoveTo actionWithDuration:arcualduration position:ccp(-monster.contentSize.height/2, actualy)];
+    id moveBy = [CCMoveBy actionWithDuration:arcualduration
+                 
+                                    position:ccp(0,-monster.position.y-monster.contentSize.height)];
+    
+    [monster runAction:moveBy];
+
+    
     //调用函数
     CCCallBlockN* movedone=[CCCallBlockN  actionWithBlock:^(CCNode*node){
         [node removeAllChildrenWithCleanup:YES];}];
-    [monster  runAction:[CCSequence  actions:move,movedone, nil]];
+    [monster  runAction:[CCSequence  actions:moveBy,movedone, nil]];
 }
 
 // on "init" you need to initialize your instance
@@ -96,6 +104,10 @@
 }
 -(void)shoot{
    CCSprite  *smoke=[CCSprite  spriteWithFile:@"13副本.png"];
+    
+    ccColor3B smoke1 = ccc3(255,0,0);
+    [smoke setColor:smoke1];
+    
     [smokes addObject:smoke];
     [[SimpleAudioEngine sharedEngine]playEffect:@"6776副本.mp3"];
     //每触发一次出现一次
@@ -179,6 +191,10 @@
 - (void)destroyFly {
     [self removeChild:_f cleanup:YES];
     _f = nil;
+    CCScene*mm=[CCScene  node];
+    fuhuo*yer=[fuhuo node];
+    [mm  addChild:yer];
+    [[CCDirector  sharedDirector]replaceScene:mm];
 }
 
 

@@ -57,7 +57,6 @@
         
         [self  addChild:bj];
         
-        CGSize size = [[CCDirector sharedDirector] winSize];
         CCSprite* f=[CCSprite  spriteWithFile:@"10副本.png"];
         f.position=ccp(100, 100);
         [self  addChild:f];

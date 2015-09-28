@@ -109,7 +109,7 @@
 
 -(void)ok:(UIButton *)sender{
     
-    UIAlertView*nn=[[UIAlertView  alloc]initWithTitle:@"提示" message:@"确定领取升级" delegate:self cancelButtonTitle:@"NO" otherButtonTitles:@"YES", nil];
+    UIAlertView*nn=[[UIAlertView  alloc]initWithTitle:@"提示" message:@"确定升级" delegate:self cancelButtonTitle:@"NO" otherButtonTitles:@"YES", nil];
     [nn show];
 }
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {

@@ -18,6 +18,7 @@
 #import "fenshu.h"
 #import "zhanji.h"
 #import "help.h"
+#import "fuhuo.h"
 @implementation guanka1
 @synthesize monstres,smokes,monstersDestroyed;
 +(CCScene *) scene
@@ -38,6 +39,9 @@
 -(void)addMonster{
     CGSize size=[[CCDirector  sharedDirector]winSize];
     CCSprite* monster=[CCSprite   spriteWithFile:@"4副本.png"];
+    
+    
+    
     [monstres  addObject:monster];
     //精灵的位置大小
     int  minx=monster.contentSize.width/2;
@@ -52,12 +56,21 @@
     int  maxduration=5;
     int  rangeduarstion=maxduration-minduration;
     int  arcualduration=(arc4random()%rangeduarstion)+minduration;
-    //移动精灵
-    CCMoveTo* move=[CCMoveTo actionWithDuration:arcualduration position:ccp(-monster.contentSize.height/2, actualy)];
+    //移动精灵（敌机俯冲）
+    //CCMoveTo* move=[CCMoveTo actionWithDuration:arcualduration position:ccp(-monster.contentSize.height/2, actualy)];
+    
+    id moveBy = [CCMoveBy actionWithDuration:arcualduration
+                 
+                                    position:ccp(0,-monster.position.y-monster.contentSize.height)];
+    
+    [monster runAction:moveBy];
+
+    
+    
     //调用函数
     CCCallBlockN* movedone=[CCCallBlockN  actionWithBlock:^(CCNode*node){
         [node removeAllChildrenWithCleanup:YES];}];
-    [monster  runAction:[CCSequence  actions:move,movedone, nil]];
+    [monster  runAction:[CCSequence  actions:moveBy,movedone, nil]];
 }
 
 // on "init" you need to initialize your instance
@@ -80,7 +93,7 @@
         _f.position=ccp(100, 100);
         [self  addChild:_f];
         //怪兽出来的速度(多少)
-        [self  schedule:@selector(gameLogic:)interval:0.15];
+        [self  schedule:@selector(gameLogic:)interval:0.25];
         
         
         CCMenuItemFont* b=[CCMenuItemFont   itemFromString:@"退出游戏" target:self selector:@selector(back:)];
@@ -117,10 +130,16 @@
         _f.position=ccp(location.x, location.y);
     }}
 - (void)shoot {
+    
     CCSprite  *smoke=[CCSprite  spriteWithFile:@"14副本.png"];
     smoke.position=ccp(300, 100);
+    //子弹的颜色
+    //ccColor4B smoke2 =ccc4(120, 201, 103, 128);
+    ccColor3B smoke1 = ccc3(255,0,255);
+    [smoke setColor:smoke1];
+    
     [smokes  addObject:smoke];
-    //子弹声音特效
+    //子弹声音
     [[SimpleAudioEngine sharedEngine]playEffect:@"yinyue.mp3"];
     
     //子弹位置
@@ -185,19 +204,26 @@
     //判断飞机于怪兽碰撞时飞机消失
     for(CCSprite *monster in monstres){
         if (_f) {
+            
             if (CGRectIntersectsRect(_f.boundingBox, monster.boundingBox)) {
-                //[self removeChild:monster cleanup:YES];
+               
                 [_timer invalidate];
+                
                 _timer = nil;
+                
                 [self performSelector:@selector(destroyFly) withObject:nil afterDelay:0.2];
             }
         }
     }
 
 }
-//判断飞机是否存在（重新定义飞机为空）
+//销毁飞机（重新定义飞机为空）
 - (void)destroyFly {
     [self removeChild:_f cleanup:YES];
     _f = nil;
+    CCScene*mm=[CCScene  node];
+    fuhuo*yer=[fuhuo node];
+    [mm  addChild:yer];
+    [[CCDirector  sharedDirector]replaceScene:mm];
 }
 @end

@@ -14,6 +14,7 @@
 #import "tongguan.h"
 #import "beibao.h"
 #import "zhanji.h"
+#import "fuhuo.h"
 @implementation yiban
 @synthesize monstres,smokes,monstersDestroyed,monstres1,smokes1;
 
@@ -38,6 +39,8 @@
     int  arcualduration=(arc4random()%rangeduarstion)+minduration;
     //移动精灵
     CCMoveTo* move=[CCMoveTo actionWithDuration:arcualduration position:ccp(-monster.contentSize.width/2, actualy)];
+    
+    
     //调用函数
     CCCallBlockN* movedone=[CCCallBlockN  actionWithBlock:^(CCNode  *node){[monstres removeObject:monster];}];
     
@@ -98,7 +101,7 @@
         [menu  alignItemsInColumns:[NSNumber  numberWithUnsignedInt:1],nil];
         [self  addChild:menu];
 //怪兽出现的速度
-        [self  schedule:@selector(gameLogic:)interval:0.05];
+        [self  schedule:@selector(gameLogic:)interval:0.25];
         [self schedule:@selector(delete:)];
         _timer= [NSTimer scheduledTimerWithTimeInterval:0.15 target:self selector:@selector(shoot) userInfo:nil repeats:YES];
     }
@@ -123,6 +126,11 @@
 }
 -(void)shoot{
     CCSprite  *smoke=[CCSprite  spriteWithFile:@"14副本 2.png"];
+    
+    ccColor3B smoke1 = ccc3(0,255,0);
+    [smoke setColor:smoke1];
+    
+
     smoke.position=ccp(300, 100);
     [smokes  addObject:smoke];
     //子弹声音特效
@@ -205,6 +213,10 @@
 - (void)destroyFly {
     [self removeChild:_f cleanup:YES];
     _f = nil;
+    CCScene*mm=[CCScene  node];
+    fuhuo*yer=[fuhuo node];
+    [mm  addChild:yer];
+    [[CCDirector  sharedDirector]replaceScene:mm];
 }
 
 @end
