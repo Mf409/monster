@@ -2,8 +2,7 @@
 //  jiangli.m
 //  游戏菜单
 //
-//  Created by maofei on 15/9/14.
-//
+//  Created by admin on 15-5-17.
 //
 
 #import "jiangli.h"
@@ -20,9 +19,9 @@
         bj1.position=ccp(160, 240);
         
         [self  addChild:bj1];
-        CGPoint o=ccp(120, 320);
-   CCSprite* bj=[CCSprite  spriteWithFile:@"30.jpg"];
-        bj.position=ccp(100, 300);
+        CGPoint o=ccp(150, 320);
+   CCSprite* bj=[CCSprite  spriteWithFile:@"32201.png"];
+        bj.position=ccp(200, 300);
         id action=[bj  runAction:[CCPlace  actionWithPosition:o]];
 
         id action6=[CCScaleBy  actionWithDuration:3 scaleX:2 scaleY:2];

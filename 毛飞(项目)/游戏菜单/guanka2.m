@@ -14,6 +14,7 @@
 #import "guoguan.h"
 #import "zhanji.h"
 #import "fuhuo.h"
+#import "PauseLayer.h"
 @implementation guanka2
 @synthesize monstres,smokes,monstersDestroyed;
 -(void)addMonster{
@@ -64,16 +65,22 @@
         [CCMenuItemFont  setFontName:@"Marker Felt"];
         [CCMenuItemFont  setFontSize:20];
 	
-       _f=[CCSprite  spriteWithFile:@"2213.jpg"];
+       _f=[CCSprite  spriteWithFile:@"2213.png"];
         _f.position=ccp(100, 100);
         [self  addChild:_f];
         
         [self  schedule:@selector(gameLogic:)interval:0.15];
         CCMenuItemFont* b=[CCMenuItemFont   itemFromString:@"退出游戏" target:self selector:@selector(back:)];
         [b  setIsEnabled:YES];
-        CCMenu *menu=[CCMenu menuWithItems:b, nil];
+        
+        CCMenuItemFont* a=[CCMenuItemFont   itemFromString:@"暂停" target:self selector:@selector(myButton:)];
+        [a  setIsEnabled:YES];
+
+        
+        
+        CCMenu *menu=[CCMenu menuWithItems:a,b, nil];
         menu.position=ccp(250, 80);
-        [menu  alignItemsInColumns:[NSNumber  numberWithUnsignedInt:1],nil];
+        [menu  alignItemsInColumns:[NSNumber  numberWithUnsignedInt:1],[NSNumber  numberWithUnsignedInt:1],nil];
         [self  addChild:menu];
         [self schedule:@selector(delete:)];
        _timer= [NSTimer scheduledTimerWithTimeInterval:0.15 target:self selector:@selector(shoot) userInfo:nil repeats:YES];
@@ -104,7 +111,8 @@
 }
 -(void)shoot{
    CCSprite  *smoke=[CCSprite  spriteWithFile:@"13副本.png"];
-    
+    //子弹颜色透明的
+    [smoke setOpacity:150];
     ccColor3B smoke1 = ccc3(255,0,0);
     [smoke setColor:smoke1];
     
@@ -197,5 +205,23 @@
     [[CCDirector  sharedDirector]replaceScene:mm];
 }
 
+//暂停游戏的调用
+-(void)myButton:(UIButton *)sender{
+    [[CCDirector sharedDirector] pause];
+    
+    UIAlertView*nn=[[UIAlertView alloc]initWithTitle:@"提示" message:@"确定暂停" delegate:self cancelButtonTitle:@"继续游戏" otherButtonTitles:@"退出游戏", nil];
+    [nn show];
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    if (buttonIndex == 0) {
+        //继续游戏
+        [[CCDirector sharedDirector] resume];
+    } else {
+        [[CCDirector  sharedDirector]replaceScene:[HelloWorldLayer scene]];
+        
+        
+    }
+}
 
 @end

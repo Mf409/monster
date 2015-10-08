@@ -169,6 +169,10 @@
 		84FDDB4C1B2142F60088F9EB /* 0abc.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 84FDDB441B2142F60088F9EB /* 0abc.mp3 */; };
 		84FDDB4D1B2142F60088F9EB /* 6abc.png in Resources */ = {isa = PBXBuildFile; fileRef = 84FDDB451B2142F60088F9EB /* 6abc.png */; };
 		84FDDD091B2154E10088F9EB /* beijing.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 84FDDD071B2154E10088F9EB /* beijing.mp3 */; };
+		857C4AED1BC5FF7C004DAFCE /* 2213.png in Resources */ = {isa = PBXBuildFile; fileRef = 857C4AEC1BC5FF7C004DAFCE /* 2213.png */; };
+		857C4AF01BC61C4B004DAFCE /* haoyou.m in Sources */ = {isa = PBXBuildFile; fileRef = 857C4AEF1BC61C4B004DAFCE /* haoyou.m */; };
+		857C4AF21BC61F01004DAFCE /* nnnng.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 857C4AF11BC61F01004DAFCE /* nnnng.jpg */; };
+		857C4B041BC655F7004DAFCE /* PauseLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 857C4B031BC655F7004DAFCE /* PauseLayer.m */; };
 		85876AA71BAFAF260028B0AF /* l.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 85876AA61BAFAF260028B0AF /* l.jpg */; };
 		859BD1D61BB4DF9100E44021 /* Ziliao.m in Sources */ = {isa = PBXBuildFile; fileRef = 859BD1D51BB4DF9100E44021 /* Ziliao.m */; };
 		859BD1DC1BB4E4B500E44021 /* balabala.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 859BD1D71BB4E4B500E44021 /* balabala.jpg */; };
@@ -195,7 +199,6 @@
 		85A2298C1BB0EF2500BE0C7E /* lpl.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 85A2298B1BB0EF2500BE0C7E /* lpl.jpg */; };
 		85A2298E1BB0F18200BE0C7E /* dff.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 85A2298D1BB0F18200BE0C7E /* dff.jpg */; };
 		85A229921BB0F95400BE0C7E /* kil.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 85A229911BB0F95400BE0C7E /* kil.jpg */; };
-		85A229941BB0FC0800BE0C7E /* 2213.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 85A229931BB0FC0800BE0C7E /* 2213.jpg */; };
 		85A41B7B1BB62EA1002A8FA2 /* help.m in Sources */ = {isa = PBXBuildFile; fileRef = 85A41B7A1BB62EA1002A8FA2 /* help.m */; };
 		85A41B7D1BB630CD002A8FA2 /* help.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 85A41B7C1BB630CD002A8FA2 /* help.jpg */; };
 		85A41B801BB63DFE002A8FA2 /* shengjibaoku.m in Sources */ = {isa = PBXBuildFile; fileRef = 85A41B7F1BB63DFE002A8FA2 /* shengjibaoku.m */; };
@@ -204,12 +207,12 @@
 		85A41B8C1BB64B7E002A8FA2 /* nhjtyjed.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 85A41B8B1BB64B7E002A8FA2 /* nhjtyjed.jpg */; };
 		85A41B931BB679FB002A8FA2 /* fuhuo.m in Sources */ = {isa = PBXBuildFile; fileRef = 85A41B921BB679FB002A8FA2 /* fuhuo.m */; };
 		85A41B971BB682B8002A8FA2 /* vfddd.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 85A41B961BB682B8002A8FA2 /* vfddd.jpg */; };
+		85A7729C1BB939FE00E2A362 /* 32201.png in Resources */ = {isa = PBXBuildFile; fileRef = 85A7729B1BB939FE00E2A362 /* 32201.png */; };
 		85B3E8121BB3E7E800155FF2 /* memed.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 85B3E8111BB3E7E800155FF2 /* memed.jpg */; };
 		85EF7A771BB12898009849FC /* zhanji.m in Sources */ = {isa = PBXBuildFile; fileRef = 85EF7A761BB12898009849FC /* zhanji.m */; };
 		85EF7A791BB12B64009849FC /* mjk.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 85EF7A781BB12B64009849FC /* mjk.jpg */; };
 		E661E2451BA68E96002F82AA /* jiangli.m in Sources */ = {isa = PBXBuildFile; fileRef = E661E2441BA68E96002F82AA /* jiangli.m */; };
 		E661E2471BA68FB4002F82AA /* jiangli.xib in Resources */ = {isa = PBXBuildFile; fileRef = E661E2461BA68FB4002F82AA /* jiangli.xib */; };
-		E661E2491BA690ED002F82AA /* 30.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E661E2481BA690ED002F82AA /* 30.jpg */; };
 		E6E0B5C21BAA468E0018764F /* beibao.m in Sources */ = {isa = PBXBuildFile; fileRef = E6E0B5C11BAA468E0018764F /* beibao.m */; };
 		E6E0B5C41BAA46A40018764F /* beibao.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6E0B5C31BAA46A40018764F /* beibao.xib */; };
 		E6E0B5C91BAA48440018764F /* 201.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E6E0B5C51BAA48440018764F /* 201.jpg */; };
@@ -503,6 +506,12 @@
 		84FDDB441B2142F60088F9EB /* 0abc.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 0abc.mp3; sourceTree = SOURCE_ROOT; };
 		84FDDB451B2142F60088F9EB /* 6abc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 6abc.png; sourceTree = SOURCE_ROOT; };
 		84FDDD071B2154E10088F9EB /* beijing.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = beijing.mp3; sourceTree = SOURCE_ROOT; };
+		857C4AEC1BC5FF7C004DAFCE /* 2213.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2213.png; sourceTree = "<group>"; };
+		857C4AEE1BC61C4B004DAFCE /* haoyou.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = haoyou.h; sourceTree = "<group>"; };
+		857C4AEF1BC61C4B004DAFCE /* haoyou.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = haoyou.m; sourceTree = "<group>"; };
+		857C4AF11BC61F01004DAFCE /* nnnng.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = nnnng.jpg; sourceTree = "<group>"; };
+		857C4B021BC655F7004DAFCE /* PauseLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PauseLayer.h; sourceTree = "<group>"; };
+		857C4B031BC655F7004DAFCE /* PauseLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PauseLayer.m; sourceTree = "<group>"; };
 		85876AA61BAFAF260028B0AF /* l.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = l.jpg; sourceTree = "<group>"; };
 		859BD1D41BB4DF9100E44021 /* Ziliao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ziliao.h; sourceTree = "<group>"; };
 		859BD1D51BB4DF9100E44021 /* Ziliao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Ziliao.m; sourceTree = "<group>"; };
@@ -534,7 +543,6 @@
 		85A2298B1BB0EF2500BE0C7E /* lpl.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = lpl.jpg; sourceTree = "<group>"; };
 		85A2298D1BB0F18200BE0C7E /* dff.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dff.jpg; sourceTree = "<group>"; };
 		85A229911BB0F95400BE0C7E /* kil.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = kil.jpg; sourceTree = "<group>"; };
-		85A229931BB0FC0800BE0C7E /* 2213.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2213.jpg; sourceTree = "<group>"; };
 		85A41B791BB62EA1002A8FA2 /* help.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = help.h; sourceTree = "<group>"; };
 		85A41B7A1BB62EA1002A8FA2 /* help.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = help.m; sourceTree = "<group>"; };
 		85A41B7C1BB630CD002A8FA2 /* help.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = help.jpg; sourceTree = "<group>"; };
@@ -546,6 +554,7 @@
 		85A41B911BB679FB002A8FA2 /* fuhuo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fuhuo.h; sourceTree = "<group>"; };
 		85A41B921BB679FB002A8FA2 /* fuhuo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = fuhuo.m; sourceTree = "<group>"; };
 		85A41B961BB682B8002A8FA2 /* vfddd.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = vfddd.jpg; sourceTree = "<group>"; };
+		85A7729B1BB939FE00E2A362 /* 32201.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 32201.png; sourceTree = "<group>"; };
 		85B3E8111BB3E7E800155FF2 /* memed.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = memed.jpg; sourceTree = "<group>"; };
 		85EF7A751BB12898009849FC /* zhanji.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zhanji.h; sourceTree = "<group>"; };
 		85EF7A761BB12898009849FC /* zhanji.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = zhanji.m; sourceTree = "<group>"; };
@@ -553,7 +562,6 @@
 		E661E2431BA68E96002F82AA /* jiangli.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = jiangli.h; sourceTree = "<group>"; };
 		E661E2441BA68E96002F82AA /* jiangli.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = jiangli.m; sourceTree = "<group>"; };
 		E661E2461BA68FB4002F82AA /* jiangli.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = jiangli.xib; sourceTree = "<group>"; };
-		E661E2481BA690ED002F82AA /* 30.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 30.jpg; sourceTree = "<group>"; };
 		E6E0B5C01BAA468E0018764F /* beibao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = beibao.h; sourceTree = "<group>"; };
 		E6E0B5C11BAA468E0018764F /* beibao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = beibao.m; sourceTree = "<group>"; };
 		E6E0B5C31BAA46A40018764F /* beibao.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = beibao.xib; sourceTree = "<group>"; };
@@ -661,55 +669,28 @@
 		84A207DF1AEF34D300AB3A55 /* 游戏菜单 */ = {
 			isa = PBXGroup;
 			children = (
+				857C4B011BC655C7004DAFCE /* 暂停游戏 */,
+				85972EE51BBA187F001741D0 /* 游戏首页 */,
+				85972EF01BBA19E9001741D0 /* 游戏帮助 */,
+				85972EE61BBA18A1001741D0 /* 游戏设置 */,
+				85972EE91BBA190B001741D0 /* 游戏关卡 */,
+				85972EEA1BBA1935001741D0 /* 关卡选择 */,
+				85972EE71BBA18D4001741D0 /* 新游戏 */,
+				85972EED1BBA1986001741D0 /* 个人资料 */,
+				85972EF41BBA1A56001741D0 /* 游戏背包 */,
+				85972EF31BBA1A3B001741D0 /* 游戏复活 */,
+				85972EF21BBA1A22001741D0 /* 升级库 */,
+				85972EF11BBA1A0A001741D0 /* 游戏奖励 */,
+				85972EEF1BBA19D2001741D0 /* 分数 */,
+				85972EEE1BBA19BA001741D0 /* 好友列表 */,
+				85972EEC1BBA1970001741D0 /* 通关 */,
+				85972EEB1BBA1956001741D0 /* 过关 */,
+				85972EE81BBA18F7001741D0 /* 退出游戏 */,
 				84A209201AEF34D500AB3A55 /* AppDelegate.h */,
 				84A209211AEF34D500AB3A55 /* AppDelegate.m */,
 				84A209231AEF34D500AB3A55 /* RootViewController.h */,
 				84A209241AEF34D500AB3A55 /* RootViewController.m */,
-				84A209261AEF34D500AB3A55 /* HelloWorldLayer.h */,
-				84A209271AEF34D500AB3A55 /* HelloWorldLayer.m */,
-				85EF7A751BB12898009849FC /* zhanji.h */,
-				85EF7A761BB12898009849FC /* zhanji.m */,
 				84A209291AEF34D500AB3A55 /* GameConfig.h */,
-				8449AA9D1AF0790600152C7A /* setGame.h */,
-				8449AA9E1AF0790600152C7A /* setGame.m */,
-				849B09CE1AF86BAE00066247 /* NewGame.h */,
-				849B09CF1AF86BAE00066247 /* NewGame.m */,
-				8402B4D51AFC577400BED7E2 /* Quit.h */,
-				8402B4D61AFC577400BED7E2 /* Quit.m */,
-				848C2F8B1B0C2D850096FA6D /* Guanka.h */,
-				848C2F8C1B0C2D850096FA6D /* Guanka.m */,
-				848C2F901B0C2E700096FA6D /* guanka1.h */,
-				848C2F911B0C2E700096FA6D /* guanka1.m */,
-				84E64B361B141CBB007EEA6F /* guanka2.h */,
-				84E64B371B141CBB007EEA6F /* guanka2.m */,
-				84ED92C91B1EB1D6002D0D37 /* yiban.h */,
-				84ED92CA1B1EB1D6002D0D37 /* yiban.m */,
-				840FF68B1B1D5D7300C5A0DD /* guoguan.h */,
-				840FF68C1B1D5D7300C5A0DD /* guoguan.m */,
-				84A5FA7C1B3A4E6E002A8FC8 /* tongguan.h */,
-				84A5FA7D1B3A4E6E002A8FC8 /* tongguan.m */,
-				85A229861BB0DB3000BE0C7E /* fenshu.h */,
-				85A229871BB0DB3000BE0C7E /* fenshu.m */,
-				859C38241BB249E000AA208F /* paihangbang.h */,
-				859C38251BB249E000AA208F /* paihangbang.m */,
-				859BD1D41BB4DF9100E44021 /* Ziliao.h */,
-				859BD1D51BB4DF9100E44021 /* Ziliao.m */,
-				859BD1E31BB51B4700E44021 /* ZiliaoTow.h */,
-				859BD1E41BB51B4700E44021 /* ZiliaoTow.m */,
-				859BD1EC1BB5231F00E44021 /* Ziliaothree.h */,
-				859BD1ED1BB5231F00E44021 /* Ziliaothree.m */,
-				85A41B7E1BB63DFE002A8FA2 /* shengjibaoku.h */,
-				85A41B7F1BB63DFE002A8FA2 /* shengjibaoku.m */,
-				85A41B911BB679FB002A8FA2 /* fuhuo.h */,
-				85A41B921BB679FB002A8FA2 /* fuhuo.m */,
-				85A41B791BB62EA1002A8FA2 /* help.h */,
-				85A41B7A1BB62EA1002A8FA2 /* help.m */,
-				E661E2431BA68E96002F82AA /* jiangli.h */,
-				E661E2441BA68E96002F82AA /* jiangli.m */,
-				E661E2461BA68FB4002F82AA /* jiangli.xib */,
-				E6E0B5C01BAA468E0018764F /* beibao.h */,
-				E6E0B5C11BAA468E0018764F /* beibao.m */,
-				E6E0B5C31BAA46A40018764F /* beibao.xib */,
 				84A207E01AEF34D300AB3A55 /* Resources */,
 				84A207F81AEF34D300AB3A55 /* libs */,
 				84A2091C1AEF34D500AB3A55 /* Supporting Files */,
@@ -996,6 +977,9 @@
 		84C2D9E01B33C95800517B80 /* 图片副本 */ = {
 			isa = PBXGroup;
 			children = (
+				857C4AF11BC61F01004DAFCE /* nnnng.jpg */,
+				857C4AEC1BC5FF7C004DAFCE /* 2213.png */,
+				85A7729B1BB939FE00E2A362 /* 32201.png */,
 				85A41B961BB682B8002A8FA2 /* vfddd.jpg */,
 				85A41B8B1BB64B7E002A8FA2 /* nhjtyjed.jpg */,
 				85A41B871BB647B5002A8FA2 /* sj2.png */,
@@ -1019,7 +1003,6 @@
 				859C38201BB23FFE00AA208F /* grey.png */,
 				859C381E1BB237E300AA208F /* 01020.png */,
 				85EF7A781BB12B64009849FC /* mjk.jpg */,
-				85A229931BB0FC0800BE0C7E /* 2213.jpg */,
 				85A229911BB0F95400BE0C7E /* kil.jpg */,
 				85A2298D1BB0F18200BE0C7E /* dff.jpg */,
 				85A2298B1BB0EF2500BE0C7E /* lpl.jpg */,
@@ -1030,7 +1013,6 @@
 				E6E0B5C61BAA48440018764F /* 202.jpg */,
 				E6E0B5C71BAA48440018764F /* 203.jpg */,
 				E6E0B5C81BAA48440018764F /* 204.jpg */,
-				E661E2481BA690ED002F82AA /* 30.jpg */,
 				84EB2C351B390C83006BDAAF /* maofei.png */,
 				84EB2C2D1B390AD6006BDAAF /* 14副本 2.png */,
 				84EB2C291B390A84006BDAAF /* 4副本 2.png */,
@@ -1049,6 +1031,173 @@
 			);
 			path = "图片副本";
 			sourceTree = SOURCE_ROOT;
+		};
+		857C4B011BC655C7004DAFCE /* 暂停游戏 */ = {
+			isa = PBXGroup;
+			children = (
+				857C4B021BC655F7004DAFCE /* PauseLayer.h */,
+				857C4B031BC655F7004DAFCE /* PauseLayer.m */,
+			);
+			name = "暂停游戏";
+			sourceTree = "<group>";
+		};
+		85972EE51BBA187F001741D0 /* 游戏首页 */ = {
+			isa = PBXGroup;
+			children = (
+				84A209261AEF34D500AB3A55 /* HelloWorldLayer.h */,
+				84A209271AEF34D500AB3A55 /* HelloWorldLayer.m */,
+			);
+			name = "游戏首页";
+			sourceTree = "<group>";
+		};
+		85972EE61BBA18A1001741D0 /* 游戏设置 */ = {
+			isa = PBXGroup;
+			children = (
+				8449AA9D1AF0790600152C7A /* setGame.h */,
+				8449AA9E1AF0790600152C7A /* setGame.m */,
+			);
+			name = "游戏设置";
+			sourceTree = "<group>";
+		};
+		85972EE71BBA18D4001741D0 /* 新游戏 */ = {
+			isa = PBXGroup;
+			children = (
+				849B09CE1AF86BAE00066247 /* NewGame.h */,
+				849B09CF1AF86BAE00066247 /* NewGame.m */,
+			);
+			name = "新游戏";
+			sourceTree = "<group>";
+		};
+		85972EE81BBA18F7001741D0 /* 退出游戏 */ = {
+			isa = PBXGroup;
+			children = (
+				8402B4D51AFC577400BED7E2 /* Quit.h */,
+				8402B4D61AFC577400BED7E2 /* Quit.m */,
+			);
+			name = "退出游戏";
+			sourceTree = "<group>";
+		};
+		85972EE91BBA190B001741D0 /* 游戏关卡 */ = {
+			isa = PBXGroup;
+			children = (
+				848C2F901B0C2E700096FA6D /* guanka1.h */,
+				848C2F911B0C2E700096FA6D /* guanka1.m */,
+				84E64B361B141CBB007EEA6F /* guanka2.h */,
+				84E64B371B141CBB007EEA6F /* guanka2.m */,
+				84ED92C91B1EB1D6002D0D37 /* yiban.h */,
+				84ED92CA1B1EB1D6002D0D37 /* yiban.m */,
+			);
+			name = "游戏关卡";
+			sourceTree = "<group>";
+		};
+		85972EEA1BBA1935001741D0 /* 关卡选择 */ = {
+			isa = PBXGroup;
+			children = (
+				848C2F8B1B0C2D850096FA6D /* Guanka.h */,
+				848C2F8C1B0C2D850096FA6D /* Guanka.m */,
+			);
+			name = "关卡选择";
+			sourceTree = "<group>";
+		};
+		85972EEB1BBA1956001741D0 /* 过关 */ = {
+			isa = PBXGroup;
+			children = (
+				840FF68B1B1D5D7300C5A0DD /* guoguan.h */,
+				840FF68C1B1D5D7300C5A0DD /* guoguan.m */,
+			);
+			name = "过关";
+			sourceTree = "<group>";
+		};
+		85972EEC1BBA1970001741D0 /* 通关 */ = {
+			isa = PBXGroup;
+			children = (
+				84A5FA7C1B3A4E6E002A8FC8 /* tongguan.h */,
+				84A5FA7D1B3A4E6E002A8FC8 /* tongguan.m */,
+			);
+			name = "通关";
+			sourceTree = "<group>";
+		};
+		85972EED1BBA1986001741D0 /* 个人资料 */ = {
+			isa = PBXGroup;
+			children = (
+				859BD1D41BB4DF9100E44021 /* Ziliao.h */,
+				859BD1D51BB4DF9100E44021 /* Ziliao.m */,
+				859BD1E31BB51B4700E44021 /* ZiliaoTow.h */,
+				859BD1E41BB51B4700E44021 /* ZiliaoTow.m */,
+				859BD1EC1BB5231F00E44021 /* Ziliaothree.h */,
+				859BD1ED1BB5231F00E44021 /* Ziliaothree.m */,
+			);
+			name = "个人资料";
+			sourceTree = "<group>";
+		};
+		85972EEE1BBA19BA001741D0 /* 好友列表 */ = {
+			isa = PBXGroup;
+			children = (
+				857C4AEE1BC61C4B004DAFCE /* haoyou.h */,
+				857C4AEF1BC61C4B004DAFCE /* haoyou.m */,
+				859C38241BB249E000AA208F /* paihangbang.h */,
+				859C38251BB249E000AA208F /* paihangbang.m */,
+			);
+			name = "好友列表";
+			sourceTree = "<group>";
+		};
+		85972EEF1BBA19D2001741D0 /* 分数 */ = {
+			isa = PBXGroup;
+			children = (
+				85A229861BB0DB3000BE0C7E /* fenshu.h */,
+				85A229871BB0DB3000BE0C7E /* fenshu.m */,
+			);
+			name = "分数";
+			sourceTree = "<group>";
+		};
+		85972EF01BBA19E9001741D0 /* 游戏帮助 */ = {
+			isa = PBXGroup;
+			children = (
+				85A41B791BB62EA1002A8FA2 /* help.h */,
+				85A41B7A1BB62EA1002A8FA2 /* help.m */,
+				85EF7A751BB12898009849FC /* zhanji.h */,
+				85EF7A761BB12898009849FC /* zhanji.m */,
+			);
+			name = "游戏帮助";
+			sourceTree = "<group>";
+		};
+		85972EF11BBA1A0A001741D0 /* 游戏奖励 */ = {
+			isa = PBXGroup;
+			children = (
+				E661E2431BA68E96002F82AA /* jiangli.h */,
+				E661E2441BA68E96002F82AA /* jiangli.m */,
+				E661E2461BA68FB4002F82AA /* jiangli.xib */,
+			);
+			name = "游戏奖励";
+			sourceTree = "<group>";
+		};
+		85972EF21BBA1A22001741D0 /* 升级库 */ = {
+			isa = PBXGroup;
+			children = (
+				85A41B7E1BB63DFE002A8FA2 /* shengjibaoku.h */,
+				85A41B7F1BB63DFE002A8FA2 /* shengjibaoku.m */,
+			);
+			name = "升级库";
+			sourceTree = "<group>";
+		};
+		85972EF31BBA1A3B001741D0 /* 游戏复活 */ = {
+			isa = PBXGroup;
+			children = (
+				85A41B911BB679FB002A8FA2 /* fuhuo.h */,
+				85A41B921BB679FB002A8FA2 /* fuhuo.m */,
+			);
+			name = "游戏复活";
+			sourceTree = "<group>";
+		};
+		85972EF41BBA1A56001741D0 /* 游戏背包 */ = {
+			isa = PBXGroup;
+			children = (
+				E6E0B5C01BAA468E0018764F /* beibao.h */,
+				E6E0B5C11BAA468E0018764F /* beibao.m */,
+				E6E0B5C31BAA46A40018764F /* beibao.xib */,
+			);
+			name = "游戏背包";
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
@@ -1110,7 +1259,6 @@
 				84A207EA1AEF34D300AB3A55 /* Icon-72.png in Resources */,
 				859BD1DC1BB4E4B500E44021 /* balabala.jpg in Resources */,
 				84A207EC1AEF34D300AB3A55 /* Icon-Small-50.png in Resources */,
-				85A229941BB0FC0800BE0C7E /* 2213.jpg in Resources */,
 				84A207EE1AEF34D300AB3A55 /* Icon-Small.png in Resources */,
 				84A207F01AEF34D300AB3A55 /* Icon-Small@2x.png in Resources */,
 				84A207F21AEF34D300AB3A55 /* Icon.png in Resources */,
@@ -1120,6 +1268,7 @@
 				859C38211BB23FFE00AA208F /* grey.png in Resources */,
 				E6E0B5CA1BAA48440018764F /* 202.jpg in Resources */,
 				859BD1DD1BB4E4B500E44021 /* hehe2.jpg in Resources */,
+				857C4AED1BC5FF7C004DAFCE /* 2213.png in Resources */,
 				859C38281BB24B1B00AA208F /* mffm.jpg in Resources */,
 				84A207F41AEF34D300AB3A55 /* Icon@2x.png in Resources */,
 				85A2298E1BB0F18200BE0C7E /* dff.jpg in Resources */,
@@ -1130,6 +1279,7 @@
 				840FF6901B1D5DE500C5A0DD /* 666副本.mp3 in Resources */,
 				840FF6911B1D5DE500C5A0DD /* 6776副本.mp3 in Resources */,
 				84ED91491B1E9BC3002D0D37 /* sbsb.mp3 in Resources */,
+				85A7729C1BB939FE00E2A362 /* 32201.png in Resources */,
 				85A41B881BB647B5002A8FA2 /* sj2.png in Resources */,
 				E6E0B5CB1BAA48440018764F /* 203.jpg in Resources */,
 				84FDDB4C1B2142F60088F9EB /* 0abc.mp3 in Resources */,
@@ -1143,7 +1293,6 @@
 				848F62B21B311506007AFE91 /* BurstPipe.plist in Resources */,
 				848F62B31B311506007AFE91 /* Comet.plist in Resources */,
 				848F62B41B311506007AFE91 /* debian.plist in Resources */,
-				E661E2491BA690ED002F82AA /* 30.jpg in Resources */,
 				848F62B51B311506007AFE91 /* ExplodingRing.plist in Resources */,
 				848F62B61B311506007AFE91 /* Flower.plist in Resources */,
 				848F62B71B311506007AFE91 /* Galaxy.plist in Resources */,
@@ -1173,6 +1322,7 @@
 				85EF7A791BB12B64009849FC /* mjk.jpg in Resources */,
 				84EB2C141B38FA9B006BDAAF /* zidan.mp3 in Resources */,
 				85A2298A1BB0DE9100BE0C7E /* def.jpg in Resources */,
+				857C4AF21BC61F01004DAFCE /* nnnng.jpg in Resources */,
 				84EB2C161B38FCD1006BDAAF /* uo.png in Resources */,
 				84EB2C1B1B390105006BDAAF /* mn.jpg in Resources */,
 				84EB2C1C1B390105006BDAAF /* nb.jpg in Resources */,
@@ -1286,6 +1436,8 @@
 				84A208E91AEF34D500AB3A55 /* ccUtils.c in Sources */,
 				84A208ED1AEF34D500AB3A55 /* CGPointExtension.m in Sources */,
 				84A208F11AEF34D500AB3A55 /* TGAlib.m in Sources */,
+				857C4B041BC655F7004DAFCE /* PauseLayer.m in Sources */,
+				857C4AF01BC61C4B004DAFCE /* haoyou.m in Sources */,
 				84A208F41AEF34D500AB3A55 /* TransformUtils.m in Sources */,
 				84A208F91AEF34D500AB3A55 /* ZipUtils.m in Sources */,
 				84A208FE1AEF34D500AB3A55 /* CDAudioManager.m in Sources */,

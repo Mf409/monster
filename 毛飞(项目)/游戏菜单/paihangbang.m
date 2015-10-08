@@ -2,7 +2,7 @@
 //  paihangbang.m
 //  游戏菜单
 //
-//  Created by 七夜 on 2015/9/23.
+//  Created by admin on 15-5-23.
 //
 //
 
@@ -13,6 +13,7 @@
 #import "Ziliao.h"
 #import "ZiliaoTow.h"
 #import "Ziliaothree.h"
+#import "haoyou.h"
 @implementation paihangbang
 -(id) init
 {

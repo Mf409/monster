@@ -2,7 +2,7 @@
 //  ZiliaoTow.m
 //  游戏菜单
 //
-//  Created by 七夜 on 2015/9/25.
+//  Created by admin on 15-5-10.
 //
 //
 
@@ -89,11 +89,11 @@
         [CCMenuItemFont  setFontSize:25];
         CCMenuItem* a90=[CCMenuItemFont   itemFromString:@"退出" target:self selector:@selector(quit)];
         
-        [CCMenuItemFont  setFontName:@"Marker Felt"];
-        [CCMenuItemFont  setFontSize:25];
-        CCMenuItem* a91=[CCMenuItemFont   itemFromString:@"设置" target:self selector:@selector(set)];
+//        [CCMenuItemFont  setFontName:@"Marker Felt"];
+//        [CCMenuItemFont  setFontSize:25];
+//        CCMenuItem* a91=[CCMenuItemFont   itemFromString:@"设置" target:self selector:@selector(set)];
         
-        CCMenu*  menu1=[CCMenu   menuWithItems:a9,a90,a91, nil];
+        CCMenu*  menu1=[CCMenu   menuWithItems:a9,a90, nil];
         menu1.position=ccp(160, 80);
         [menu1  alignItemsHorizontally];
         [self  addChild:menu1];
@@ -113,11 +113,11 @@
     [sc addChild:layer12];
     [[CCDirector   sharedDirector]replaceScene:sc];
 }
--(void)set{
-    CCScene*sc=[CCScene  node];
-    setGame*layer12=[setGame  node];
-    [sc addChild:layer12];
-    [[CCDirector   sharedDirector]replaceScene:sc];
-}
+//-(void)set{
+//    CCScene*sc=[CCScene  node];
+//    setGame*layer12=[setGame  node];
+//    [sc addChild:layer12];
+//    [[CCDirector   sharedDirector]replaceScene:sc];
+//}
 
 @end

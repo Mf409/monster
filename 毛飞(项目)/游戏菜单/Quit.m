@@ -30,8 +30,8 @@
         [menu  alignItemsInColumns:[NSNumber  numberWithUnsignedInt:1],[NSNumber  numberWithUnsignedInt:1],nil];
         
       [self  addChild:menu];
-        CCParticleSystemQuad*mao=[CCParticleSystemQuad  particleWithFile:@"BurstPipe.plist"];
-        [self  addChild:mao];
+       // CCParticleSystemQuad*mao=[CCParticleSystemQuad  particleWithFile:@"BurstPipe.plist"];
+        //[self  addChild:mao];
 
     }
     return  self;

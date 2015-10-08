@@ -2,7 +2,7 @@
 //  zhanji.m
 //  游戏菜单
 //
-//  Created by 七夜 on 2015/9/22.
+//  Created by admin on 15-5-11.
 //
 //
 #import <UIKit/UIKit.h>
@@ -29,7 +29,7 @@
         [a3  setIsEnabled:YES];
         a3.position=ccp(120, 180);
         [self addChild:a3];
-        CCMenuItemImage *image=[CCMenuItemImage  itemFromNormalImage:@"2213.jpg" selectedImage:@"2213.jpg" target:self selector:@selector(hui)];
+        CCMenuItemImage *image=[CCMenuItemImage  itemFromNormalImage:@"2213.png" selectedImage:@"2213.jpg" target:self selector:@selector(hui)];
         image.position=ccp(100, 100);
        // [self  addChild:image];
         CCMenuItemImage *image1=[CCMenuItemImage  itemFromNormalImage:@"10副本.png" selectedImage:@"10副本.png" target:self selector:@selector(back)];

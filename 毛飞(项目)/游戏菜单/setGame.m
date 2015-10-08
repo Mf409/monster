@@ -50,10 +50,10 @@
         
         
         CCMenuItemFont* b=[CCMenuItemFont   itemFromString:@"首页" target:self selector:@selector(back:)];
-         CCMenuItemFont* b1=[CCMenuItemFont   itemFromString:@"背包" target:self selector:@selector(go:)];
+//         CCMenuItemFont* b1=[CCMenuItemFont   itemFromString:@"背包" target:self selector:@selector(go:)];
         CCMenuItemFont* r=[CCMenuItemFont itemFromString:@"进入游戏" target:self  selector:@selector(go)];
         
-        CCMenu *menu=[CCMenu menuWithItems:m01,m0, sb,s,e1,e,i1,i,f1,f,m1,m,sob,so, b,b1, r, nil];
+        CCMenu *menu=[CCMenu menuWithItems:m01,m0, sb,s,e1,e,i1,i,f1,f,m1,m,sob,so, b, r, nil];
         
         [menu  alignItemsInColumns:[NSNumber  numberWithUnsignedInt:2],[NSNumber  numberWithUnsignedInt:2],[NSNumber  numberWithUnsignedInt:2],[NSNumber  numberWithUnsignedInt:2],[NSNumber  numberWithUnsignedInt:2],[NSNumber  numberWithUnsignedInt:2],[NSNumber  numberWithUnsignedInt:2],[NSNumber  numberWithUnsignedInt:1], [NSNumber  numberWithUnsignedInt:1],[NSNumber  numberWithUnsignedInt:1], nil];
         [self  addChild:menu];
@@ -64,13 +64,13 @@
        }
     return self;
 }
--(void)go:(id)sender{
-    CCScene*o1=[CCScene  node];
-   beibao*layer31=[beibao  node];
-    [o1 addChild:layer31];
-    [[CCDirector   sharedDirector]replaceScene:o1];
-    
-}
+//-(void)go:(id)sender{
+//    CCScene*o1=[CCScene  node];
+//   beibao*layer31=[beibao  node];
+//    [o1 addChild:layer31];
+//    [[CCDirector   sharedDirector]replaceScene:o1];
+//    
+//}
 
 -(void)back:(id)sender{
     CCScene*o=[CCScene  node];

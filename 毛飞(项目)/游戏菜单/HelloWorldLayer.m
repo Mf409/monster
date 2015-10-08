@@ -20,6 +20,7 @@
 #import "paihangbang.h"
 #import "help.h"
 #import "shengjibaoku.h"
+#import "haoyou.h"
 // HelloWorldLayer implementation
 @implementation HelloWorldLayer
 
@@ -51,22 +52,24 @@
         [[SimpleAudioEngine  sharedEngine]playBackgroundMusic:@ "yinyue.mp3"];
        //CGSize size = [[CCDirector sharedDirector] winSize];
         [self  addChild:bj];
-       
+    
        
         CCLabelTTF*label=[CCLabelTTF labelWithString:@"打怪兽" dimensions:CGSizeMake([UIScreen mainScreen].bounds.size.width, 300) alignment:NSTextAlignmentLeft fontName:@"Marker Felt" fontSize:40];
         label.position=ccp(265, 255);
         ccColor3B color = ccc3(250, 0, 250);
+        
         [label setColor:color];
         [self  addChild:label];
-      
-
+         
         
          //字体字号
         [CCMenuItemFont  setFontName:@"Marker Felt"];
         [CCMenuItemFont  setFontSize:30];
         CCMenuItem* a=[CCMenuItemFont   itemFromString:@"新游戏" target:self selector:@selector(xinyou)];//newgame
         
-         CCMenuItem* p=[CCMenuItemFont   itemFromString:@"排行榜" target:self selector:@selector(bang)];
+        
+        
+         CCMenuItem* p=[CCMenuItemFont   itemFromString:@"我的好友" target:self selector:@selector(bang)];
         
          CCMenuItem* eb=[CCMenuItemFont   itemFromString:@"游戏帮助" target:self selector:@selector(help)];
         
@@ -83,6 +86,8 @@
         CCMenu*  menu=[CCMenu   menuWithItems:a,p, eb, b,g,n, c, nil];
         [menu   alignItemsVertically];
         [self  addChild:menu];
+        
+        //添加粒子特效
         CCParticleSystemQuad*mao=[CCParticleSystemQuad  particleWithFile:@"debian.plist"];
         [self  addChild:mao];
 
@@ -119,7 +124,7 @@
 }
 -(void)bang{
     CCScene*r=[CCScene  node];
-    paihangbang*layer11=[paihangbang  node];
+    haoyou*layer11=[haoyou  node];
     
     [r addChild:layer11];
     [[CCDirector  sharedDirector]replaceScene:r];

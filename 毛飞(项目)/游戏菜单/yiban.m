@@ -15,44 +15,52 @@
 #import "beibao.h"
 #import "zhanji.h"
 #import "fuhuo.h"
+#import "PauseLayer.h"
 @implementation yiban
 @synthesize monstres,smokes,monstersDestroyed,monstres1,smokes1;
 
 -(void)addMonster{
     CGSize size=[[CCDirector  sharedDirector]winSize];
-    CCSprite* monster=[CCSprite   spriteWithFile:@"grey.png"];
-    CCSprite* monster1=[CCSprite   spriteWithFile:@"4副本 2.png"];
+    CCSprite* monster=[CCSprite   spriteWithFile:@"4副本.png"];
+    CCSprite* monster1=[CCSprite   spriteWithFile:@"grey.png"];
     [monstres  addObject:monster];
     [monstres1  addObject:monstres1];
     //精灵的位置大小
-    int  miny=monster.contentSize.width/2;
-    int  maxy=size.height-monster.contentSize.height/2;
-    int  rangey=maxy-miny;
+    int  minx=monster.contentSize.width/2;
+    int  maxx=size.width-monster.contentSize.width/2;
+    int  rangex=maxx-minx;
     //产生随机数
-    int  actualy=(arc4random()%rangey)+miny;
-    monster.position=ccp(size.height+monster.contentSize.height/2,actualy);
+    int  actualy=(arc4random()%rangex)+minx;
+    monster.position=ccp(actualy,size.height+monster.contentSize.height/2);
     [self addChild:monster];
     //经过屏幕怒的时间长短
     int  minduration=2;
-    int  maxduration=5;
+    int  maxduration=4;
     int  rangeduarstion=maxduration-minduration;
     int  arcualduration=(arc4random()%rangeduarstion)+minduration;
-    //移动精灵
-    CCMoveTo* move=[CCMoveTo actionWithDuration:arcualduration position:ccp(-monster.contentSize.width/2, actualy)];
+    //移动精灵(敌机俯冲)
+    //CCMoveTo* move=[CCMoveTo actionWithDuration:arcualduration position:ccp(-monster.contentSize.height/2, actualy)];
+    id moveBy = [CCMoveBy actionWithDuration:arcualduration
+                 
+                                    position:ccp(0,-monster.position.y-monster.contentSize.height)];
     
+    [monster runAction:moveBy];
     
     //调用函数
-    CCCallBlockN* movedone=[CCCallBlockN  actionWithBlock:^(CCNode  *node){[monstres removeObject:monster];}];
+    CCCallBlockN* movedone=[CCCallBlockN  actionWithBlock:^(CCNode*node){
+        [node removeAllChildrenWithCleanup:YES];}];
+    [monster  runAction:[CCSequence  actions:moveBy,movedone, nil]];
     
-    [monster  runAction:[CCSequence  actions:move,movedone, nil]];
-    //怪兽从上向下
+    
+    //从左往右
+    
     //精灵的位置大小
-    int  minx=monster1.contentSize.width/2;
-    int  maxx=size.width-monster1.contentSize.width/2;
-    int  rangex=maxx-minx;
+    int  miny=monster1.contentSize.width/2;
+    int  maxy=size.height-monster1.contentSize.height/2;
+    int  rangey=maxy-miny;
     //产生随机数
-    int  actualy1=(arc4random()%rangex)+minx;
-    monster1.position=ccp(actualy1,size.height+monster1.contentSize.height/2);
+    int  actualy1=(arc4random()%rangey)+miny;
+    monster1.position=ccp(size.height+monster1.contentSize.height/2,actualy1);
     [self addChild:monster1];
     //经过屏幕怒的时间长短
     int  minduration1=2;
@@ -60,14 +68,17 @@
     int  rangeduarstion1=maxduration1-minduration1;
     int  arcualduration1=(arc4random()%rangeduarstion1)+minduration1;
     //移动精灵
-    CCMoveTo* move1=[CCMoveTo actionWithDuration:arcualduration1 position:ccp(-monster1.contentSize.height/2, actualy1)];
+    CCMoveTo* move=[CCMoveTo actionWithDuration:arcualduration1 position:ccp(-monster1.contentSize.width/2, actualy)];
+    
+    
     //调用函数
-    CCCallBlockN* movedone1=[CCCallBlockN  actionWithBlock:^(CCNode*node){
-        [node removeAllChildrenWithCleanup:YES];}];
+    CCCallBlockN* movedone1=[CCCallBlockN  actionWithBlock:^(CCNode  *node){[monstres1 removeObject:monster1];}];
+    
+    [monster1  runAction:[CCSequence  actions:move,movedone1, nil]];
     
     
     
-    [monster1  runAction:[CCSequence  actions:move1,movedone1, nil]];
+
 }
 
 // on "init" you need to initialize your instance
@@ -96,9 +107,13 @@
         
         CCMenuItemFont* b=[CCMenuItemFont   itemFromString:@"退出游戏" target:self selector:@selector(back:)];
         [b  setIsEnabled:YES];
-        CCMenu *menu=[CCMenu menuWithItems:b, nil];
+        CCMenuItemFont* a=[CCMenuItemFont   itemFromString:@"暂停" target:self selector:@selector(myButton:)];
+        [a  setIsEnabled:YES];
+
+        
+        CCMenu *menu=[CCMenu menuWithItems:a,b, nil];
         menu.position=ccp(250, 80);
-        [menu  alignItemsInColumns:[NSNumber  numberWithUnsignedInt:1],nil];
+        [menu  alignItemsInColumns:[NSNumber  numberWithUnsignedInt:1],[NSNumber  numberWithUnsignedInt:1],nil];
         [self  addChild:menu];
 //怪兽出现的速度
         [self  schedule:@selector(gameLogic:)interval:0.25];
@@ -126,7 +141,7 @@
 }
 -(void)shoot{
     CCSprite  *smoke=[CCSprite  spriteWithFile:@"14副本 2.png"];
-    
+    [smoke setOpacity:150];
     ccColor3B smoke1 = ccc3(0,255,0);
     [smoke setColor:smoke1];
     
@@ -217,6 +232,24 @@
     fuhuo*yer=[fuhuo node];
     [mm  addChild:yer];
     [[CCDirector  sharedDirector]replaceScene:mm];
+}
+//暂停游戏的调用
+-(void)myButton:(UIButton *)sender{
+    [[CCDirector sharedDirector] pause];
+    
+    UIAlertView*nn=[[UIAlertView alloc]initWithTitle:@"提示" message:@"确定暂停" delegate:self cancelButtonTitle:@"继续游戏" otherButtonTitles:@"退出游戏", nil];
+    [nn show];
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    if (buttonIndex == 0) {
+        //继续游戏
+        [[CCDirector sharedDirector] resume];
+    } else {
+        [[CCDirector  sharedDirector]replaceScene:[HelloWorldLayer scene]];
+        
+        
+    }
 }
 
 @end

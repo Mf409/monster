@@ -125,7 +125,7 @@
     
 }
 //打中怪兽消失
--(void)delete:(ccTime)de{
+-(void)delete:(id)de{
     //存放消失的怪兽
     NSMutableArray *smokesToDelete=[[NSMutableArray  alloc]init];
     for(CCSprite *smoke in smokes){

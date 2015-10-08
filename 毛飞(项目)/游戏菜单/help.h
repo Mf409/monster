@@ -1,8 +1,8 @@
 //
 //  help.h
 //  游戏菜单
-//
-//  Created by 七夜 on 2015/9/26.
+//  Created by admin on 15-4-28.
+//  Copyright __MyCompanyName__ 2015年. All rights reserved.
 //
 //
 

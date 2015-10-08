@@ -19,6 +19,7 @@
 #import "zhanji.h"
 #import "help.h"
 #import "fuhuo.h"
+#import "PauseLayer.h"
 @implementation guanka1
 @synthesize monstres,smokes,monstersDestroyed;
 +(CCScene *) scene
@@ -98,10 +99,13 @@
         
         CCMenuItemFont* b=[CCMenuItemFont   itemFromString:@"退出游戏" target:self selector:@selector(back:)];
         [b  setIsEnabled:YES];
-        CCMenu *menu=[CCMenu menuWithItems:b, nil];
+        CCMenuItemFont* a=[CCMenuItemFont   itemFromString:@"暂停" target:self selector:@selector(myButton:)];
+        [a  setIsEnabled:YES];
+        CCMenu *menu=[CCMenu menuWithItems:a,b, nil];
         menu.position=ccp(250, 80);
-        [menu  alignItemsInColumns:[NSNumber  numberWithUnsignedInt:1],nil];
+        [menu  alignItemsInColumns:[NSNumber  numberWithUnsignedInt:1],[NSNumber  numberWithUnsignedInt:1],nil];
         [self  addChild:menu];
+        //删除精灵的遍历
           [self schedule:@selector(delete:)];
         //子弹的时间
          _timer=[NSTimer scheduledTimerWithTimeInterval:0.15 target:self selector:@selector(shoot) userInfo:nil repeats:YES];
@@ -136,6 +140,7 @@
     //子弹的颜色
     //ccColor4B smoke2 =ccc4(120, 201, 103, 128);
     ccColor3B smoke1 = ccc3(255,0,255);
+    [smoke setOpacity:150];
     [smoke setColor:smoke1];
     
     [smokes  addObject:smoke];
@@ -226,4 +231,24 @@
     [mm  addChild:yer];
     [[CCDirector  sharedDirector]replaceScene:mm];
 }
+
+//暂停游戏的调用
+-(void)myButton:(UIButton *)sender{
+    [[CCDirector sharedDirector] pause];
+    
+   UIAlertView*nn=[[UIAlertView alloc]initWithTitle:@"提示" message:@"确定暂停" delegate:self cancelButtonTitle:@"继续游戏" otherButtonTitles:@"退出游戏", nil];
+    [nn show];
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    if (buttonIndex == 0) {
+        //继续游戏
+        [[CCDirector sharedDirector] resume];
+    } else {
+        [[CCDirector  sharedDirector]replaceScene:[HelloWorldLayer scene]];
+        
+        
+    }
+}
+
 @end
