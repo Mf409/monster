@@ -15,7 +15,7 @@
 @implementation zhanji
 -(id)init{
     if(self==[super  init]){
-        CCSprite* bj=[CCSprite  spriteWithFile:@"mjk.jpg"];
+        CCSprite* bj=[CCSprite  spriteWithFile:@"lklkl.jpg"];
         bj.position=ccp(160, 240);
         [self  addChild:bj];
         CCLabelTTF*label=[CCLabelTTF labelWithString:@"公元2059年，地球人口的持续增长，可用资源几近枯竭。由此带来的生活压力迫使各国相继开启了太空能源计划。在对潘多拉星球进行能源开发的过程中，本国与外空守护者引发的一场星球大战！" dimensions:CGSizeMake([UIScreen mainScreen].bounds.size.width, 300) alignment:NSTextAlignmentLeft fontName:@"Marker Felt" fontSize:25];
@@ -35,7 +35,7 @@
         CCMenuItemImage *image1=[CCMenuItemImage  itemFromNormalImage:@"10副本.png" selectedImage:@"10副本.png" target:self selector:@selector(back)];
         image1.position=ccp(250, 100);
         //[self  addChild:image1];
-        CCMenuItemImage *image2=[CCMenuItemImage  itemFromNormalImage:@"01020.png" selectedImage:@"01020.png" target:self selector:@selector(back1)];
+        CCMenuItemImage *image2=[CCMenuItemImage  itemFromNormalImage:@"jijjij.png" selectedImage:@"01020.png" target:self selector:@selector(back1)];
         image2.position=ccp(350, 100);
         
         CCMenu*  menu=[CCMenu   menuWithItems:image,image1,image2, nil];

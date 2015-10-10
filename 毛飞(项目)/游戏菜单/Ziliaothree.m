@@ -68,7 +68,7 @@
         [self  addChild:a01];
         
         CGPoint o1=ccp(150, 200);
-        CCSprite* b0j=[CCSprite  spriteWithFile:@"kikil.jpg"];
+        CCSprite* b0j=[CCSprite  spriteWithFile:@"kikil.png"];
         b0j.position=ccp(120, 200);
         //旋转到 – CCRotateTo
         id  action60=[CCRotateTo actionWithDuration:5 angle:180.f];

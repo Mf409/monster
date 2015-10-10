@@ -72,7 +72,7 @@
         [self  addChild:a01];
         
         
-        CCSprite* b0j=[CCSprite  spriteWithFile:@"ololk.jpg"];
+        CCSprite* b0j=[CCSprite  spriteWithFile:@"ololk.png"];
         b0j.position=ccp(120, 200);
         CGPoint o1=ccp(150, 200);
         

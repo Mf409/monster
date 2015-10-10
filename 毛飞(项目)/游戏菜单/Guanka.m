@@ -16,7 +16,7 @@
 -(id) init
 {
 	if( (self=[super init])) {
-        CCSprite* bj=[CCSprite  spriteWithFile:@"fffg.jpg"];
+        CCSprite* bj=[CCSprite  spriteWithFile:@"nwed.jpg"];
         bj.position=ccp(160, 240);
         [self  addChild:bj];
         CCLabelTTF*label=[CCLabelTTF labelWithString:@"关卡类型" dimensions:CGSizeMake([UIScreen mainScreen].bounds.size.width, 300) alignment:NSTextAlignmentLeft fontName:@"Marker Felt" fontSize:35];

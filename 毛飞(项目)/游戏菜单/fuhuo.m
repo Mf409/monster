@@ -10,6 +10,7 @@
 #import"cocos2d.h"
 #import "HelloWorldLayer.h"
 #import "guanka1.h"
+#import "shengji.h"
 @implementation fuhuo
 -(id)init{
     if( (self=[super init])) {

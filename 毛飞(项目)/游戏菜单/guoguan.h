@@ -11,6 +11,7 @@
 #import "cocos2d.h"
 #import "guanka1.h"
 #import "jiangli.h"
+#import "shengji.h"
 @interface guoguan : CCLayer
 
 @end

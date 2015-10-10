@@ -72,7 +72,7 @@
         [self  addChild:a01];
         
         CGPoint o1=ccp(150, 200);
-        CCSprite* b0j=[CCSprite  spriteWithFile:@"fefe.jpg"];
+        CCSprite* b0j=[CCSprite  spriteWithFile:@"fefe.png"];
         b0j.position=ccp(120, 200);
         id action60 = [CCTintBy actionWithDuration:2 red:0 green:255 blue:255];;
         id action20=[bj1  runAction:[CCPlace  actionWithPosition:o1]];

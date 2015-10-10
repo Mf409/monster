@@ -17,4 +17,5 @@
 @property  int monstersDestroyed;
 @property (strong, nonatomic) CCSprite* f;
 @property (strong, nonatomic) NSTimer *timer;
+@property (strong, nonatomic) NSTimer *timer2;
 @end

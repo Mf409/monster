@@ -11,6 +11,7 @@
 #import "HelloWorldLayer.h"
 #import "guanka1.h"
 #import "setGame.h"
+#import "shengji.h"
 @implementation shengjibaoku
 +(CCScene *) scene
 {
@@ -29,7 +30,7 @@
 
 -(id)init{
     if( (self=[super init])) {
-        CCSprite* bj=[CCSprite  spriteWithFile:@"nhjtyjed.jpg"];
+        CCSprite* bj=[CCSprite  spriteWithFile:@"tttbn.jpeg"];
         bj.position=ccp(160, 240);
         [self  addChild:bj];
         
@@ -46,7 +47,7 @@
         [self  addChild:label2];
         
         
-        CCSprite* bj1=[CCSprite  spriteWithFile:@"sj1.jpg"];
+        CCSprite* bj1=[CCSprite  spriteWithFile:@"sj1.png"];
         bj1.position=ccp(50, 250);
         //图片效果
         CGPoint o=ccp(75, 330);
@@ -109,17 +110,17 @@
 
 -(void)ok:(UIButton *)sender{
     
-    UIAlertView*nn=[[UIAlertView  alloc]initWithTitle:@"提示" message:@"确定升级" delegate:self cancelButtonTitle:@"NO" otherButtonTitles:@"YES", nil];
+    UIAlertView*nn=[[UIAlertView  alloc]initWithTitle:@"提示" message:@"是否愿意花费10000金币" delegate:self cancelButtonTitle:@"不愿意" otherButtonTitles:@"愿意", nil];
     [nn show];
 }
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
     if (buttonIndex == 1) {
-        UIAlertView*nn=[[UIAlertView  alloc]initWithTitle:@"提示" message:@"升级成功您一共花费10000金币1" delegate:self cancelButtonTitle:@"进入游戏" otherButtonTitles:@"留在此页", nil];
+        UIAlertView*nn=[[UIAlertView  alloc]initWithTitle:@"提示" message:@"恭喜你升级成功" delegate:self cancelButtonTitle:@"进入游戏" otherButtonTitles:@"留在此页", nil];
         [nn show];
         
     }
     if(buttonIndex==0){
-        [[CCDirector  sharedDirector]replaceScene:[guanka1 scene]];
+        [[CCDirector  sharedDirector]replaceScene:[shengji    scene]];
         
     }
 }

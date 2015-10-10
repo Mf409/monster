@@ -24,15 +24,17 @@
     CCSprite* monster=[CCSprite   spriteWithFile:@"4副本.png"];
     CCSprite* monster1=[CCSprite   spriteWithFile:@"grey.png"];
     [monstres  addObject:monster];
-    [monstres1  addObject:monstres1];
+    [monstres  addObject:monster1];
     //精灵的位置大小
-    int  minx=monster.contentSize.width/2;
-    int  maxx=size.width-monster.contentSize.width/2;
-    int  rangex=maxx-minx;
+//    int  minx=monster.contentSize.width/2;
+//    int  maxx=size.width-monster.contentSize.width/2;
+//    int  rangex=maxx-minx;
     //产生随机数
-    int  actualy=(arc4random()%rangex)+minx;
+    float sw = [UIScreen mainScreen].bounds.size.width;
+    int  actualy = (arc4random()%(int)((int)sw * 1.5)) - (int)sw * 0.25;
     monster.position=ccp(actualy,size.height+monster.contentSize.height/2);
     [self addChild:monster];
+    
     //经过屏幕怒的时间长短
     int  minduration=2;
     int  maxduration=4;
@@ -40,13 +42,13 @@
     int  arcualduration=(arc4random()%rangeduarstion)+minduration;
     //移动精灵(敌机俯冲)
     //CCMoveTo* move=[CCMoveTo actionWithDuration:arcualduration position:ccp(-monster.contentSize.height/2, actualy)];
+    int  ranran = (arc4random()%400)-200;
+    NSLog(@"%d", ranran);
     id moveBy = [CCMoveBy actionWithDuration:arcualduration
                  
-                                    position:ccp(0,-monster.position.y-monster.contentSize.height)];
+                                    position:ccp(ranran,-monster.position.y-monster.contentSize.height)];
     
-    [monster runAction:moveBy];
-    
-    //调用函数
+    [monster runAction:moveBy];    //调用函数
     CCCallBlockN* movedone=[CCCallBlockN  actionWithBlock:^(CCNode*node){
         [node removeAllChildrenWithCleanup:YES];}];
     [monster  runAction:[CCSequence  actions:moveBy,movedone, nil]];
@@ -72,7 +74,7 @@
     
     
     //调用函数
-    CCCallBlockN* movedone1=[CCCallBlockN  actionWithBlock:^(CCNode  *node){[monstres1 removeObject:monster1];}];
+    CCCallBlockN* movedone1=[CCCallBlockN  actionWithBlock:^(CCNode  *node){[monstres removeObject:monster1];}];
     
     [monster1  runAction:[CCSequence  actions:move,movedone1, nil]];
     
@@ -88,11 +90,17 @@
 	if( (self=[super init])) {
         [CCMenuItemFont  setFontName:@"Marker Felt"];
         [CCMenuItemFont  setFontSize:20];
-
-        CCSprite* bj=[CCSprite  spriteWithFile:@"lklkl.jpg"];
-        bj.position=ccp(160, 240);
+     CGSize screenSize = [[CCDirector sharedDirector] winSize];
+        CCSprite* bj=[CCSprite  spriteWithFile:@"momo.jpg"];
+        bj.position=ccp(screenSize.width*0.5, screenSize.height*0.5);
         
-        [self  addChild:bj];
+        CCSprite *bj2=[CCSprite spriteWithFile:@"vvbn.jpg"];
+        bj2.position=ccp(bj.position.x, bj.position.y - (bj.contentSize.height + bj2.contentSize.height) / 2);
+        [bj.texture setAliasTexParameters];
+        [bj2.texture  setAliasTexParameters];
+        [self schedule:@selector(move)interval:0.05];
+        [self  addChild:bj  z:0 tag:11];
+        [self addChild:bj2 z:0 tag:22];
         [[SimpleAudioEngine  sharedEngine]playBackgroundMusic:@"nabc.mp3"];
         //触摸事件
         monstres=[[NSMutableArray  alloc]init];
@@ -101,7 +109,7 @@
         smokes1=[[NSMutableArray  alloc]init];
         [self setIsTouchEnabled:YES];
 		
-        _f=[CCSprite  spriteWithFile:@"01020.png"];
+        _f=[CCSprite  spriteWithFile:@"jijjij.png"];
        _f.position=ccp(35, 100);
         [self  addChild:_f];
         
@@ -118,10 +126,23 @@
 //怪兽出现的速度
         [self  schedule:@selector(gameLogic:)interval:0.25];
         [self schedule:@selector(delete:)];
-        _timer= [NSTimer scheduledTimerWithTimeInterval:0.15 target:self selector:@selector(shoot) userInfo:nil repeats:YES];
+        _timer=[NSTimer scheduledTimerWithTimeInterval:0.2 target:self selector:@selector(shoot) userInfo:nil repeats:YES];
+        _timer2=[NSTimer scheduledTimerWithTimeInterval:0.6 target:self selector:@selector(shoot2) userInfo:nil repeats:YES];
     }
 	return self;
 }
+-(void)move{
+    CCSprite*tempSprite=(CCSprite *)[self getChildByTag:11];
+    tempSprite.position=ccpAdd(tempSprite.position, ccp(0, 1));
+    tempSprite=(CCSprite *)[self getChildByTag:22];
+    tempSprite.position=ccpAdd(tempSprite.position, ccp(0, 1));
+    
+    
+    
+}
+
+
+
 -(void)back:(id)sender{
     CCScene*o=[CCScene  node];
     HelloWorldLayer*layer9=[HelloWorldLayer   node];
@@ -139,6 +160,70 @@
     }
 
 }
+
+- (void)shoot2 {
+    CCSprite  *smoke1=[CCSprite  spriteWithFile:@"dandan.png"];
+    smoke1.position=ccp(150, 10);
+    //子弹位置
+    if (_f) {
+        smoke1.position=ccp(_f.position.x - 30,_f.position.y);
+    }
+    ccColor3B smokeo1 = ccc3(255,120,035);
+    [smoke1 setOpacity:120];
+    [smoke1 setColor:smokeo1];
+    //[smokes1  addObject:smoke1];
+    [self addChild:smoke1];
+    //x坐标
+    int realx1=smoke1.position.x - 60;
+    //y坐标
+    int  realy1=[UIScreen mainScreen].bounds.size.height + smoke1.contentSize.height;
+    //最终位置
+    CGPoint realdest1=ccp(realx1, realy1);
+    int m11=realx1-smoke1.position.x;
+    int  m21=realy1-smoke1.position.y;
+    float length1=sqrtf(m11*m11+m21*m21);
+    int v1=160/1;
+    float s1=length1/v1;
+    //移动
+    CCMoveTo* moveto1=[CCMoveTo actionWithDuration:s1 position:realdest1];
+    CCCallBlockN* movedone1=[CCCallBlockN  actionWithBlock:^(CCNode*node){
+        [node removeAllChildrenWithCleanup:YES];}];
+    [smoke1  runAction:[CCSequence  actions:moveto1,movedone1, nil]];
+    [smokes  addObject:smoke1];
+    
+    
+    CCSprite  *smoke2=[CCSprite  spriteWithFile:@"dandan.png"];
+    smoke2.position=ccp(150, 10);
+    //子弹位置
+    if (_f) {
+        smoke2.position=ccp(_f.position.x + 30,_f.position.y);
+    }
+    ccColor3B smokeo2 = ccc3(255,0,100);
+    [smoke2 setOpacity:120];
+    [smoke2 setColor:smokeo2];
+    //[smokes1  addObject:smoke1];
+    [self addChild:smoke2];
+    //x坐标
+    int realx2=smoke2.position.x + 60;
+    //y坐标
+    int  realy2=[UIScreen mainScreen].bounds.size.height + smoke2.contentSize.height;
+    //最终位置
+    CGPoint realdest2=ccp(realx2, realy2);
+    int m12=realx2-smoke2.position.x;
+    int  m22=realy2-smoke2.position.y;
+    float length2=sqrtf(m12*m12+m22*m22);
+    int v2=160/1;
+    float s2=length2/v2;
+    //移动
+    CCMoveTo* moveto2=[CCMoveTo actionWithDuration:s2 position:realdest2];
+    CCCallBlockN* movedone2=[CCCallBlockN  actionWithBlock:^(CCNode*node){
+        [node removeAllChildrenWithCleanup:YES];}];
+    [smoke2  runAction:[CCSequence  actions:moveto2,movedone2, nil]];
+    [smokes  addObject:smoke2];
+}
+
+
+
 -(void)shoot{
     CCSprite  *smoke=[CCSprite  spriteWithFile:@"14副本 2.png"];
     [smoke setOpacity:150];
@@ -200,6 +285,7 @@
     }
             
             if(monsterToDelete.count>0){
+                
                 [smokesToDelete  addObject:smoke];
             }
         }}
@@ -209,12 +295,15 @@
         [self removeChild:smoke cleanup:YES];
     }
     for(CCSprite *monster in monstres){
+        
         if (_f) {
+            
             if (CGRectIntersectsRect(_f.boundingBox, monster.boundingBox)) {
                 //[self removeChild:monster cleanup:YES];
                 [_timer invalidate];
                 _timer = nil;
-                [self performSelector:@selector(destroyFly) withObject:nil afterDelay:0.2];
+                [self performSelector:@selector(destroyFly) withObject:nil
+                           afterDelay:0.2];
             }
         }
     }

@@ -20,6 +20,22 @@
         v.position=ccp(160,280);
         [self  addChild:v];
         
+        
+        
+        CCSprite* b0j=[CCSprite  spriteWithFile:@"mofei.png"];
+        b0j.position=ccp(150, 320);
+        //旋转到 – CCRotateTo
+        //id  action60=[CCRotateTo actionWithDuration:5 angle:180.f];
+       id action60 = [CCBlink actionWithDuration:5 blinks:5];
+        id action61 = [CCTintBy actionWithDuration:2 red:0 green:255 blue:255];
+        //id  action62=[CCRotateTo actionWithDuration:5 angle:180.f];
+
+        [b0j runAction:[CCSequence  actions:action61,action60,  nil]];
+        [self  addChild:b0j];
+
+        
+        
+        
         CCMenuItemFont* m1=[CCMenuItemFont   itemFromString:@"退出游戏" target:self selector:@selector(myButton:)];
         [m1  setIsEnabled:YES];
 
@@ -30,6 +46,11 @@
         [menu  alignItemsInColumns:[NSNumber  numberWithUnsignedInt:1],[NSNumber  numberWithUnsignedInt:1],nil];
         
       [self  addChild:menu];
+        
+        
+        
+        
+        
        // CCParticleSystemQuad*mao=[CCParticleSystemQuad  particleWithFile:@"BurstPipe.plist"];
         //[self  addChild:mao];
 
