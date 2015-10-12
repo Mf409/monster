@@ -282,6 +282,12 @@
             //打够9个怪兽、跳转下一个场景
             monstersDestroyed=monstersDestroyed+1;
             if(monstersDestroyed>30){
+                [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"fh"];
+                [[NSUserDefaults standardUserDefaults] synchronize];
+                [[NSUserDefaults standardUserDefaults] setObject:@"shengji" forKey:@"fh"];
+                
+                
+                
                 CCScene*mmm=[CCScene  node];
                 guoguan*layer=[guoguan node];
                 [mmm  addChild:layer];
@@ -315,14 +321,28 @@
 }
 //销毁飞机（重新定义飞机为空）
 - (void)destroyFly {
+    
+    CCParticleExplosion *mao = [CCParticleExplosion  particleWithFile:@"Phoenix.plist"];
+    mao.positionType=kCCPositionTypeFree;
     [self removeChild:_f cleanup:YES];
     _f = nil;
+    
+    [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"fh"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    [[NSUserDefaults standardUserDefaults] setObject:@"shengji" forKey:@"fh"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    [self performSelector:@selector(jump:) withObject:mao afterDelay:1];
+
+    [self  addChild:mao];
+}
+- (void)jump:(CCParticleSystemQuad *)mao {
+    [self  removeChild:mao cleanup:YES];
+    
     CCScene*mm=[CCScene  node];
     fuhuo*yer=[fuhuo node];
     [mm  addChild:yer];
     [[CCDirector  sharedDirector]replaceScene:mm];
 }
-
 //暂停游戏的调用
 -(void)myButton:(UIButton *)sender{
     [[CCDirector sharedDirector] pause];

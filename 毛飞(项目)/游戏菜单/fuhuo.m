@@ -11,15 +11,17 @@
 #import "HelloWorldLayer.h"
 #import "guanka1.h"
 #import "shengji.h"
+#import "guanka2.h"
+#import "yiban.h"
 @implementation fuhuo
 -(id)init{
     if( (self=[super init])) {
-        CCSprite* bj=[CCSprite  spriteWithFile:@"vfddd.jpg"];
+        CCSprite* bj=[CCSprite  spriteWithFile:@"fffb.jpg"];
         bj.position=ccp(160, 240);
         [self  addChild:bj];
         
         CCLabelTTF*label=[CCLabelTTF labelWithString:@"你已被小怪咬死,请选择！" dimensions:CGSizeMake([UIScreen mainScreen].bounds.size.width, 300) alignment:NSTextAlignmentLeft fontName:@"Marker Felt" fontSize:25];
-        label.position=ccp(195, 180);
+        label.position=ccp(195, 140);
         ccColor3B color = ccc3(255,0,0);
         [label setColor:color];
         [self  addChild:label];
@@ -35,7 +37,7 @@
         [a1  setIsEnabled:YES];
         
         CCMenu *menu=[CCMenu menuWithItems:a,a1, nil];
-        menu.position=ccp(155,250);
+        menu.position=ccp(155,200);
         [menu  alignItemsInColumns:[NSNumber  numberWithUnsignedInt:1],[NSNumber  numberWithUnsignedInt:1],nil];
         [menu   alignItemsVertically];
         [self  addChild:menu];
@@ -51,8 +53,20 @@
 }
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
     if (buttonIndex == 1) {
-        [[CCDirector  sharedDirector]replaceScene:[guanka1 scene]];
-        
+        if ([[[NSUserDefaults standardUserDefaults] objectForKey:@"fh"] isEqualToString:@"guanka1"]) {
+            [[CCDirector  sharedDirector]replaceScene:[guanka1 scene]];
+        } else if ([[[NSUserDefaults standardUserDefaults] objectForKey:@"fh"] isEqualToString:@"guanka2"]) {
+            [[CCDirector  sharedDirector]replaceScene:[guanka2 scene]];
+        } else if ([[[NSUserDefaults standardUserDefaults] objectForKey:@"fh"] isEqualToString:@"yiban"]) {
+            [[CCDirector  sharedDirector]replaceScene:[yiban scene]];
+        }else if ([[[NSUserDefaults standardUserDefaults] objectForKey:@"fh"] isEqualToString:@"shengji"]) {
+            [[CCDirector  sharedDirector]replaceScene:[shengji  scene]];
+
+            
+            
+            
+            
+        }
     }
     }
 

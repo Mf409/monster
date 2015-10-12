@@ -13,6 +13,7 @@
 #import "guanka2.h"
 #import "jiangli.h"
 #import "fenshu.h"
+#import "yiban.h"
 @implementation guoguan
 -(id) init
 {
@@ -47,17 +48,42 @@
 }
 -(void)jixu{       
     CCScene*sc=[CCScene  node];
-    guanka2*layer12=[guanka2  node];
-    [sc addChild:layer12];
-    [[CCDirector   sharedDirector]replaceScene:sc];
+    if ([[[NSUserDefaults standardUserDefaults] objectForKey:@"fh"] isEqualToString:@"guanka2"]) {
+       
+        yiban*layer21=[yiban  node];
+        [sc  addChild:layer21];
+    } else if ([[[NSUserDefaults standardUserDefaults] objectForKey:@"fh"] isEqualToString:@"yiban"]) {
+        guanka1*layer21=[guanka1  node];
+        [sc  addChild:layer21];
+    } else if ([[[NSUserDefaults standardUserDefaults] objectForKey:@"fh"] isEqualToString:@"guanka1"]) {
+      
+        guanka2*layer21=[guanka2  node];
+        [sc  addChild:layer21];
+    }
+    [[CCDirector  sharedDirector]replaceScene:sc];
+    
+    
+    
+
 }
 
 -(void)tuichu{
     CCScene*sc1=[CCScene  node];
-    guanka1*layer21=[guanka1  node];
-    
-    [sc1  addChild:layer21];
+    if ([[[NSUserDefaults standardUserDefaults] objectForKey:@"fh"] isEqualToString:@"guanka1"]) {
+        guanka1*layer21=[guanka1  node];
+        [sc1  addChild:layer21];
+    } else if ([[[NSUserDefaults standardUserDefaults] objectForKey:@"fh"] isEqualToString:@"guanka2"]) {
+        guanka2*layer21=[guanka2  node];
+        [sc1  addChild:layer21];
+    } else if ([[[NSUserDefaults standardUserDefaults] objectForKey:@"fh"] isEqualToString:@"yiban"]) {
+        yiban*layer21=[yiban  node];
+        [sc1  addChild:layer21];
+    }else if ([[[NSUserDefaults standardUserDefaults] objectForKey:@"fh"] isEqualToString:@"shengji"]) {
+        shengji*layer21=[shengji  node];
+        [sc1  addChild:layer21];}
     [[CCDirector  sharedDirector]replaceScene:sc1];
+    
+    
 }
 -(void)jiangli{
     CCScene *sc102=[CCScene  node];

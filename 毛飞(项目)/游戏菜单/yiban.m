@@ -18,7 +18,20 @@
 #import "PauseLayer.h"
 @implementation yiban
 @synthesize monstres,smokes,monstersDestroyed,monstres1,smokes1;
-
++(CCScene *) scene
+{
+    // 'scene' is an autorelease object.
+    CCScene *scene = [CCScene node];
+    
+    // 'layer' is an autorelease object.
+    yiban *layer = [yiban node];
+    
+    // add layer as a child to scene
+    [scene addChild: layer];
+    
+    // return the scene
+    return scene;
+}
 -(void)addMonster{
     CGSize size=[[CCDirector  sharedDirector]winSize];
     CCSprite* monster=[CCSprite   spriteWithFile:@"4副本.png"];
@@ -163,7 +176,7 @@
 
 - (void)shoot2 {
     CCSprite  *smoke1=[CCSprite  spriteWithFile:@"dandan.png"];
-    smoke1.position=ccp(150, 10);
+    smoke1.position=ccp(300, 500);
     //子弹位置
     if (_f) {
         smoke1.position=ccp(_f.position.x - 30,_f.position.y);
@@ -193,7 +206,7 @@
     
     
     CCSprite  *smoke2=[CCSprite  spriteWithFile:@"dandan.png"];
-    smoke2.position=ccp(150, 10);
+    smoke2.position=ccp(600, 1000);
     //子弹位置
     if (_f) {
         smoke2.position=ccp(_f.position.x + 30,_f.position.y);
@@ -278,6 +291,13 @@
             //打够9个怪兽、跳转下一个场景
             monstersDestroyed=monstersDestroyed+1;
             if(monstersDestroyed>30){
+                
+                [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"fh"];
+                [[NSUserDefaults standardUserDefaults] synchronize];
+                [[NSUserDefaults standardUserDefaults] setObject:@"yiban" forKey:@"fh"];
+                
+                
+                
                 CCScene*mmm=[CCScene  node];
                 guoguan*layer=[guoguan node];
                 [mmm  addChild:layer];
@@ -315,13 +335,39 @@
     
 }
 - (void)destroyFly {
+    CCParticleExplosion *mao = [CCParticleExplosion particleWithFile:@"Phoenix.plist"];
+    mao.positionType=kCCPositionTypeFree;
+    //    kCCPositionTypeFree
+    //    kCCPositionTypeRelative
+    //CGPoint point = CGPointMake(_f.position.x, _f.position.y);
+    //    CGPoint point = CGPointMake(191.150436401367, 217.411758422852);
+    //    mao.sourcePosition = point;
+    mao.position=ccp(_f.position.x, _f.position.y);
+    [self addChild:mao];
+    
     [self removeChild:_f cleanup:YES];
     _f = nil;
+    
+    [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"fh"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    [[NSUserDefaults standardUserDefaults] setObject:@"yiban" forKey:@"fh"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    [self performSelector:@selector(jump:) withObject:mao afterDelay:1];
+}
+- (void)jump:(CCParticleExplosion *)mao {
+    [self  removeChild:mao cleanup:YES];
+    
+    [self performSelector:@selector(redirector) withObject:nil afterDelay:1];
+}
+
+- (void)redirector {
     CCScene*mm=[CCScene  node];
     fuhuo*yer=[fuhuo node];
     [mm  addChild:yer];
     [[CCDirector  sharedDirector]replaceScene:mm];
 }
+
+
 //暂停游戏的调用
 -(void)myButton:(UIButton *)sender{
     [[CCDirector sharedDirector] pause];
