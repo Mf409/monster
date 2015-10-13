@@ -18,7 +18,7 @@
 {
     if( (self=[super init])) {
         CCSprite* bj=[CCSprite  spriteWithFile:@"def.jpg"];
-        bj.position=ccp(160, 240);
+        bj.position=ccp(160,  330);
         [self  addChild:bj];
         [CCMenuItemFont  setFontName:@"Marker Felt"];
         [CCMenuItemFont  setFontSize:25];

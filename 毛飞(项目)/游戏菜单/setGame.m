@@ -20,7 +20,7 @@
         [CCMenuItemFont  setFontName:@"Marker Felt"];
         [CCMenuItemFont  setFontSize:25];
         CCSprite*v=[CCSprite  spriteWithFile:@"lpl.jpg"];
-        v.position=ccp(160, 240);
+        v.position=ccp(160,  330);
         [self  addChild:v];
         CCMenuItemFont *m1=[CCMenuItemFont  itemFromString:@"飞机类型"];
         [m1  setIsEnabled:NO];

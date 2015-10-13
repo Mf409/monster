@@ -53,7 +53,7 @@
         [CCMenuItemFont  setFontSize:20];
         [self setIsTouchEnabled:YES];
         CCSprite* bj=[CCSprite  spriteWithFile:@"5副本.jpg"];
-        bj.position=ccp(160, 240);
+        bj.position=ccp(160,  330);
         
         [self  addChild:bj];
         

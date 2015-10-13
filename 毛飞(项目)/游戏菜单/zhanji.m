@@ -16,10 +16,10 @@
 -(id)init{
     if(self==[super  init]){
         CCSprite* bj=[CCSprite  spriteWithFile:@"lklkl.jpg"];
-        bj.position=ccp(160, 240);
+        bj.position=ccp(160, 330);
         [self  addChild:bj];
         CCLabelTTF*label=[CCLabelTTF labelWithString:@"公元2059年，地球人口的持续增长，可用资源几近枯竭。由此带来的生活压力迫使各国相继开启了太空能源计划。在对潘多拉星球进行能源开发的过程中，本国与外空守护者引发的一场星球大战！" dimensions:CGSizeMake([UIScreen mainScreen].bounds.size.width, 300) alignment:NSTextAlignmentLeft fontName:@"Marker Felt" fontSize:25];
-        label.position=ccp(168, 306);
+        label.position=ccp(168, 400);
         ccColor3B color = ccc3(200, 250, 126);
         [label setColor:color];
         [self  addChild:label];
@@ -27,7 +27,7 @@
         [CCMenuItemFont  setFontSize:20];
         CCMenuItem* a3=[CCMenuItemFont   itemFromString:@"选择战机，开始游戏" target:self selector:nil];
         [a3  setIsEnabled:YES];
-        a3.position=ccp(120, 180);
+        a3.position=ccp(120, 280);
         [self addChild:a3];
         CCMenuItemImage *image=[CCMenuItemImage  itemFromNormalImage:@"2213.png" selectedImage:@"2213.jpg" target:self selector:@selector(hui)];
         image.position=ccp(100, 100);
@@ -42,7 +42,7 @@
         //以列的方式摆放
         //[menu   alignItemsVertically];
         [menu  alignItemsHorizontally];
-        menu.position=ccp(150, 100);
+        menu.position=ccp(150, 200);
         [self  addChild:menu];
     }
     return self;

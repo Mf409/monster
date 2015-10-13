@@ -47,15 +47,15 @@
 	if( (self=[super init])) {
         //添加背景
         CCSprite* bj=[CCSprite  spriteWithFile:@"mujkl.jpg"];
-        bj.position=ccp(160,240);
+        bj.position=ccp(160,330);
         //背景音乐
-        [[SimpleAudioEngine  sharedEngine]playBackgroundMusic:@ "yinyue.mp3"];
+        [[SimpleAudioEngine sharedEngine] playBackgroundMusic:@ "yinyue.mp3"];
        //CGSize size = [[CCDirector sharedDirector] winSize];
         [self  addChild:bj];
     
        
         CCLabelTTF*label=[CCLabelTTF labelWithString:@"打怪兽" dimensions:CGSizeMake([UIScreen mainScreen].bounds.size.width, 300) alignment:NSTextAlignmentLeft fontName:@"Marker Felt" fontSize:40];
-        label.position=ccp(265, 255);
+        label.position=ccp(265, 300);
         ccColor3B color = ccc3(250, 0, 250);
         
         [label setColor:color];

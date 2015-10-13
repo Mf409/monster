@@ -19,18 +19,15 @@
 {
 	if( (self=[super init])) {
              CCSprite* bj=[CCSprite  spriteWithFile:@"memed.jpg"];
-              bj.position=ccp(150, 300);
+              bj.position=ccp(150,  330);
             [self  addChild:bj];
         
         
         CCLabelTTF*label=[CCLabelTTF labelWithString:@"恭喜过关" dimensions:CGSizeMake([UIScreen mainScreen].bounds.size.width, 300) alignment:NSTextAlignmentLeft fontName:@"Marker Felt" fontSize:30];
-        label.position=ccp(270, 180);
+        label.position=ccp(270, 220);
         ccColor3B color = ccc3(0, 250, 0);
         [label setColor:color];
         [self  addChild:label];
-        
-        
-        
         [CCMenuItemFont  setFontName:@"Marker Felt"];
         [CCMenuItemFont  setFontSize:20];
         CCMenuItem* a9=[CCMenuItemFont   itemFromString:@"查看分数" target:self selector:@selector(fenshu)];
@@ -62,9 +59,6 @@
     }
     [[CCDirector  sharedDirector]replaceScene:sc];
     
-    
-    
-
 }
 
 -(void)tuichu{

@@ -16,7 +16,7 @@
 {
     if( (self=[super init])) {
         CCSprite* bj1=[CCSprite  spriteWithFile:@"l.jpg"];
-        bj1.position=ccp(160, 240);
+        bj1.position=ccp(160,  330);
         
         [self  addChild:bj1];
         CGPoint o=ccp(150, 320);

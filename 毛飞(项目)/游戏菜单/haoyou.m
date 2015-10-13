@@ -15,7 +15,7 @@
 {
     if( (self=[super init])) {
         CCSprite* bj=[CCSprite  spriteWithFile:@"nnnng.jpg"];
-        bj.position=ccp(150, 300);
+        bj.position=ccp(150,  330);
         [self  addChild:bj];
         
         CCLabelTTF*label=[CCLabelTTF labelWithString:@"好友列表" dimensions:CGSizeMake([UIScreen mainScreen].bounds.size.width, 300) alignment:NSTextAlignmentLeft fontName:@"Marker Felt" fontSize:35];

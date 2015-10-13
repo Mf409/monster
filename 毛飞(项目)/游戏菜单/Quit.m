@@ -17,7 +17,7 @@
         [CCMenuItemFont  setFontName:@"Marker Felt"];
         [CCMenuItemFont  setFontSize:20];
         CCSprite*v=[CCSprite  spriteWithFile:@"cvvc.jpg"];
-        v.position=ccp(160,280);
+        v.position=ccp(160, 330);
         [self  addChild:v];
         
         

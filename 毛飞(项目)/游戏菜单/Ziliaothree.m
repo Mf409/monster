@@ -15,7 +15,7 @@
 -(id)init{
     if( (self=[super init])) {
         CCSprite* bj=[CCSprite  spriteWithFile:@"mnbv.jpg"];
-        bj.position=ccp(160, 280);
+        bj.position=ccp(160,  330);
         [self  addChild:bj];
         CGPoint o=ccp(50, 410);
         CCSprite* bj1=[CCSprite  spriteWithFile:@"balabala.jpg"];

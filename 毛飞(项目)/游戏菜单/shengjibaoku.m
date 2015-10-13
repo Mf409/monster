@@ -31,7 +31,7 @@
 -(id)init{
     if( (self=[super init])) {
         CCSprite* bj=[CCSprite  spriteWithFile:@"tttbn.jpeg"];
-        bj.position=ccp(160, 240);
+        bj.position=ccp(160,  330);
         [self  addChild:bj];
         
         CCLabelTTF*label1=[CCLabelTTF labelWithString:@"人物" dimensions:CGSizeMake([UIScreen mainScreen].bounds.size.width, 300) alignment:NSTextAlignmentLeft fontName:@"Marker Felt" fontSize:25];

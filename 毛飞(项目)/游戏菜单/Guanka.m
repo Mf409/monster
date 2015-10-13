@@ -17,10 +17,10 @@
 {
 	if( (self=[super init])) {
         CCSprite* bj=[CCSprite  spriteWithFile:@"nwed.jpg"];
-        bj.position=ccp(160, 240);
+        bj.position=ccp(160,  330);
         [self  addChild:bj];
         CCLabelTTF*label=[CCLabelTTF labelWithString:@"关卡类型" dimensions:CGSizeMake([UIScreen mainScreen].bounds.size.width, 300) alignment:NSTextAlignmentLeft fontName:@"Marker Felt" fontSize:35];
-        label.position=ccp(250, 230);
+        label.position=ccp(250, 250);
         ccColor3B color = ccc3(0, 250, 0);
         [label setColor:color];
         [self  addChild:label];

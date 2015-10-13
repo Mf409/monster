@@ -85,7 +85,7 @@
 	if( (self=[super init])) {
         monstres=[[NSMutableArray  alloc]init];
         smokes=[[NSMutableArray  alloc]init];
-
+        
         [CCMenuItemFont  setFontName:@"Marker Felt"];
         [CCMenuItemFont  setFontSize:20];
           [self setIsTouchEnabled:YES];
@@ -222,7 +222,7 @@
 
 
 - (void)shoot {
-    
+    NSLog(@"shoot");
     CCSprite  *smoke=[CCSprite  spriteWithFile:@"14副本.png"];
     smoke.position=ccp(300, 100);
     //子弹的颜色
@@ -233,7 +233,7 @@
     
     [smokes  addObject:smoke];
     //子弹声音
-    [[SimpleAudioEngine sharedEngine]playEffect:@"yinyue.mp3"];
+    [[SimpleAudioEngine sharedEngine] playEffect:@"zidan.mp3"];
     
     //子弹位置
     if (_f) {
@@ -284,6 +284,10 @@
                 [[NSUserDefaults standardUserDefaults] synchronize];
                 [[NSUserDefaults standardUserDefaults] setObject:@"guanka1" forKey:@"fh"];
                 
+                [_timer invalidate];
+                _timer = nil;
+                [_timer2 invalidate];
+                _timer2 = nil;
                 
                 CCScene*mmm=[CCScene  node];
                 guoguan*layer=[guoguan node];
@@ -307,8 +311,9 @@
             if (CGRectIntersectsRect(_f.boundingBox, monster.boundingBox)) {
                
                 [_timer invalidate];
-                
                 _timer = nil;
+                [_timer2 invalidate];
+                _timer2 = nil;
                 
                 [self performSelector:@selector(destroyFly) withObject:nil afterDelay:0.2];
             }
@@ -346,11 +351,11 @@
 
 - (void)jump:(CCParticleExplosion *)mao {
     [self  removeChild:mao cleanup:YES];
-    
     [self performSelector:@selector(redirector) withObject:nil afterDelay:1];
 }
 //下一个场景
 - (void)redirector {
+    //[[SimpleAudioEngine sharedEngine] unloadEffect:@"yinyue.mp3"];
     CCScene*mm=[CCScene  node];
     fuhuo*yer=[fuhuo node];
     [mm  addChild:yer];

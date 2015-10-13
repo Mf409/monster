@@ -15,7 +15,7 @@
 {
 	if( (self=[super init])) {
         CCSprite* bj=[CCSprite  spriteWithFile:@"cv.jpg"];
-        bj.position=ccp(150, 300);
+        bj.position=ccp(150,  330);
         [self  addChild:bj];
         
         
